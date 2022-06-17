@@ -8,7 +8,7 @@ The current WebViewer version in this sample should be: 8.6.
 
 ## Context
 
-In Mendix, you can allow users to upload and download uploaded files. This is rather straightforward but getting them to load and update in WebViewer is not as straightforward. This sample shows you how to accomplish that.
+In Mendix, you can allow users to upload files and download uploaded files. This is rather straightforward but getting them to load and update in WebViewer is not as straightforward. This sample shows you how to accomplish that.
 
 ## Methodology
 
