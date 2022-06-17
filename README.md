@@ -1,6 +1,6 @@
 # WebViewer - Mendix Document Saving/Updating Sample
 
-This sample Mendix app allows users to upload files, annotate them, and then save the updated version of them. This is meant to be a sample for reference and not for production use.
+This sample Mendix app allows users to upload files, annotate them, and then save the updated version. This is meant to be a sample for reference and not for production use.
 
 The WebViewer widget project used in this sample can be found [here](https://github.com/PDFTron/webviewer-mendix-sample).
 
