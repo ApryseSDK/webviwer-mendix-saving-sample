@@ -36,11 +36,15 @@ public class UpdateDocument extends CustomJavaAction<java.lang.Void>
 		this.Parameter = this.__Parameter == null ? null : myfirstmodule.proxies.File.initialize(getContext(), __Parameter);
 
 		// BEGIN USER CODE
+		// With the file ID we got from the request, create an identifier object
 		IMendixIdentifier id = Core.createMendixIdentifier(fileId);
+		// Load the original object from the context
 		File origFile = File.load(getContext(), id);
+		// Get the file data we got from the request to write into the original object
 		InputStream stream = Core.getFileDocumentContent(getContext(), this.Parameter.getMendixObject());
 		origFile.setContents(getContext(), stream, this.Parameter.getSize());
 		origFile.commit();
+		// Delete the new file object created when we sent the update request
 		this.Parameter.delete();
 		this.Parameter.commit();
 
