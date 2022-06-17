@@ -1,6 +1,6 @@
 # WebViewer - Mendix Document Saving/Updating Sample
 
-This sample Mendix app allows users to upload files, annotate them, and then save the updated version of them.
+This sample Mendix app allows users to upload files, annotate them, and then save the updated version of them. This is meant to be a sample for reference and not for production use.
 
 The WebViewer widget project used in this sample can be found [here](https://github.com/PDFTron/webviewer-mendix-sample).
 
@@ -55,3 +55,7 @@ Beginning with Mendix 9, the `theme/resources` path is no longer valid. As such,
     ├───core
     └───ui
 ```
+
+## Future Possibilities
+
+Since this sample assumes all documents are PDF documents, it is possible to extend the sample to parse out the extension of the uploaded document and store it on the `File` entity. This can then be passed to WebViewer so that it can be provided to the `extension` loading option. You can read more about how and why [here](https://www.pdftron.com/documentation/web/guides/basics/open/url/#the-extension-option).
