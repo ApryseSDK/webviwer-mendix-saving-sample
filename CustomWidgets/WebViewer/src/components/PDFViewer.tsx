@@ -1,24 +1,27 @@
-import { createElement, useRef, useEffect } from "react";
-import viewer from "@pdftron/webviewer";
+import { createElement, useRef, useEffect, useState } from "react";
+import viewer, { WebViewerInstance } from "@pdftron/webviewer";
 
 export interface InputProps {
-    value: string;
+    file?: string;
     fileId?: string;
+    l?: string;
 }
 
 const PDFViewer: React.FC<InputProps> = props => {
     const viewerRef = useRef<HTMLDivElement>(null);
-    let wvInstance: any = null;
+    const [instance, setInstance] = useState<null | WebViewerInstance>(null);
 
     useEffect(() => {
         viewer(
             {
-                path: '/resources/lib',
+                path: "/resources/lib",
+                licenseKey: props.l
             },
             viewerRef.current as HTMLDivElement
         ).then(instance => {
             const { UI, Core } = instance;
-            wvInstance = instance;
+
+            setInstance(instance);
 
             UI.setHeaderItems(header => {
                 header.push({
@@ -40,15 +43,17 @@ const PDFViewer: React.FC<InputProps> = props => {
                 });
             });
 
-            wvInstance.loadDocument(props.value);
+            if (props.file) {
+                UI.loadDocument(props.file);
+            }
         });
     }, []);
 
     useEffect(() => {
-        if (wvInstance && props.value) {
-            wvInstance.loadDocument(props.value);
+        if (instance && props.file) {
+            instance.UI.loadDocument(props.file);
         }
-    }, [props.value]);
+    }, [instance, props.file]);
 
     return <div className="webviewer" ref={viewerRef}></div>;
 };

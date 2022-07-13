@@ -7,8 +7,11 @@ import "./ui/WebViewer.css";
 
 export default class WebViewer extends Component<WebViewerContainerProps> {
     render(): ReactNode {
-        const value = this.props.textAttribute.value || "";
-        const fileId = this.props.fileId.value || "";
-        return <PDFViewer value={value} fileId={fileId} />;
+        const viewerProps = {
+            file: this.props.fileAttributeUrl?.value || this.props.fileUrl,
+            fileId: this.props.fileId?.value,
+            l: this.props.l
+        };
+        return <PDFViewer {...viewerProps} />;
     }
 }

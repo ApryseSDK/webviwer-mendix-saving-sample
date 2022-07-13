@@ -6,7 +6,12 @@ declare function require(name: string): string;
 
 export class preview extends Component<WebViewerPreviewProps> {
     render(): ReactNode {
-        return <PDFViewer value={this.props.textAttribute} fileId={this.props.fileId} />;
+        const viewerProps = {
+            file: this.props.fileAttributeUrl || this.props.fileUrl,
+            fileId: this.props.fileId,
+            l: this.props.l
+        };
+        return <PDFViewer {...viewerProps} />;
     }
 }
 
