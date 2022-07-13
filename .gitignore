@@ -14,3 +14,5 @@
 /**/node_modules/
 !/javascriptsource/**/node_modules/
 /nativemobile/builds/
+/theme/web/resources/lib
+/widgets/pdftron.WebViewer.mpk
