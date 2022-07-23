@@ -17,7 +17,7 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 public class GetFileId extends CustomJavaAction<java.lang.String>
 {
 	private IMendixObject __inputFile;
-	private webviewer.proxies.File inputFile;
+	private File inputFile;
 
 	public GetFileId(IContext context, IMendixObject inputFile)
 	{
@@ -28,7 +28,7 @@ public class GetFileId extends CustomJavaAction<java.lang.String>
 	@java.lang.Override
 	public java.lang.String executeAction() throws Exception
 	{
-		this.inputFile = this.__inputFile == null ? null : webviewer.proxies.File.initialize(getContext(), __inputFile);
+		this.inputFile = this.__inputFile == null ? null : File.initialize(getContext(), __inputFile);
 
 		// BEGIN USER CODE
 		return "" + this.inputFile.getMendixObject().getId().toLong();
