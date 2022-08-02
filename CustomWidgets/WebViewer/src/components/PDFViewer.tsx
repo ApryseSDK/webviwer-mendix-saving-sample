@@ -34,11 +34,28 @@ const PDFViewer: React.FC<InputProps> = props => {
                             links: true,
                             widgets: true,
                         });
+
                         // Send it merged with the document data to REST API to update
-                        fetch(`/rest/documentstore/v1/documents/${props.fileId}`, {
+                        const updateTask = fetch(`/rest/documentstore/v1/documents/${props.fileId}`, {
                             method: 'PUT',
                             body: await Core.documentViewer.getDocument().getFileData({ xfdfString }),
-                        })
+                        });
+
+                        // Add minimum artificial delay to make it look like work is being done
+                        // Otherwise, requests may complete too fast
+                        const uiDelay = new Promise(resolve => {
+                            setTimeout(() => {
+                                resolve(undefined);
+                            }, 3000);
+                        });
+
+                        // Show existing loading modal
+                        instance.UI.openElements(['loadingModal']);
+
+                        //
+                        await Promise.all([uiDelay, updateTask]);
+
+                        instance.UI.closeElements(['loadingModal']);
                     }
                 });
             });
