@@ -6,6 +6,8 @@
 import { CSSProperties } from "react";
 import { EditableValue } from "mendix";
 
+export type DefaultLanguageEnum = "en" | "de" | "es" | "fr" | "it" | "el" | "ja" | "ko" | "nl" | "pt_br" | "ru" | "zh_cn" | "zh_tw" | "vi" | "uk" | "id" | "ms" | "bn" | "hi" | "tr";
+
 export interface WebViewerContainerProps {
     name: string;
     class: string;
@@ -13,7 +15,21 @@ export interface WebViewerContainerProps {
     tabIndex?: number;
     fileUrl: string;
     fileAttributeUrl?: EditableValue<string>;
-    fileId: EditableValue<string>;
+    enableFilePicker: boolean;
+    loadAsPDF: boolean;
+    enableFullAPI: boolean;
+    annotationUser?: EditableValue<string>;
+    enableAnnotations: boolean;
+    enableMeasurement: boolean;
+    enableRedaction: boolean;
+    selectAnnotationOnCreation: boolean;
+    containerHeight: string;
+    enableDarkMode: boolean;
+    defaultLanguage: DefaultLanguageEnum;
+    notesInLeftPanel: boolean;
+    customCss: string;
+    accessibleMode: boolean;
+    highContrastMode: boolean;
     l: string;
 }
 
@@ -24,6 +40,20 @@ export interface WebViewerPreviewProps {
     readOnly: boolean;
     fileUrl: string;
     fileAttributeUrl: string;
-    fileId: string;
+    enableFilePicker: boolean;
+    loadAsPDF: boolean;
+    enableFullAPI: boolean;
+    annotationUser: string;
+    enableAnnotations: boolean;
+    enableMeasurement: boolean;
+    enableRedaction: boolean;
+    selectAnnotationOnCreation: boolean;
+    containerHeight: string;
+    enableDarkMode: boolean;
+    defaultLanguage: DefaultLanguageEnum;
+    notesInLeftPanel: boolean;
+    customCss: string;
+    accessibleMode: boolean;
+    highContrastMode: boolean;
     l: string;
 }
