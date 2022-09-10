@@ -20,6 +20,13 @@
                         <attributeType name="String"/>
                     </attributeTypes>
                 </property>
+                <property key="fileId" type="attribute" required="false">
+                    <caption>File ID</caption>
+                    <description>The Mendix file identifier. Used with WebViewer module for saving.</description>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                    </attributeTypes>
+                </property>
                 <property key="enableFilePicker" type="boolean" defaultValue="false">
                     <caption>Show file picker</caption>
                     <description>Allow users to load their own local files.</description>

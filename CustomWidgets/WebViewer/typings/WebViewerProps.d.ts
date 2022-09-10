@@ -15,6 +15,7 @@ export interface WebViewerContainerProps {
     tabIndex?: number;
     fileUrl: string;
     fileAttributeUrl?: EditableValue<string>;
+    fileId?: EditableValue<string>;
     enableFilePicker: boolean;
     loadAsPDF: boolean;
     enableFullAPI: boolean;
@@ -40,6 +41,7 @@ export interface WebViewerPreviewProps {
     readOnly: boolean;
     fileUrl: string;
     fileAttributeUrl: string;
+    fileId: string;
     enableFilePicker: boolean;
     loadAsPDF: boolean;
     enableFullAPI: boolean;

@@ -9,6 +9,7 @@ export class preview extends Component<WebViewerPreviewProps> {
         const viewerProps = {
             containerHeight: this.props.containerHeight,
             file: this.props.fileAttributeUrl || this.props.fileUrl,
+            fileId: this.props.fileId,
             enableFilePicker: this.props.enableFilePicker,
             annotationUser: this.props.annotationUser,
             accessibleMode: this.props.accessibleMode,
