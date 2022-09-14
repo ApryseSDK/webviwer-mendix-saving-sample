@@ -111,6 +111,14 @@
                 <caption>Notes in left panel</caption>
                 <description>Moves the notes panel from the right to the left.</description>
             </property>
+            <property key="enabledElements" type="string" multiline="true" required="false">
+                <caption>Enabled elements</caption>
+                <description>A list of elements (written on individual lines) to enable in the UI. You can find values in the UI using the data-element attribute. Takes priority over disabled elements.</description>
+            </property>
+            <property key="disabledElements" type="string" multiline="true" required="false">
+                <caption>Disabled elements</caption>
+                <description>A list of elements (written on individual lines) to disable in the UI. You can find values in the UI using the data-element attribute.</description>
+            </property>
             <property key="customCss" type="string" required="false">
                 <caption>Custom CSS</caption>
                 <description>Provide a path to your own CSS to customize styling.</description>
@@ -124,6 +132,12 @@
             <property key="highContrastMode" type="boolean" defaultValue="false">
                 <caption>Enable high contrast mode</caption>
                 <description>Enable high contrast colors to help with accessibility.</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Module">
+            <property key="enableDocumentUpdates" type="boolean" defaultValue="true">
+                <caption>Enable document updates</caption>
+                <description>Adds a button to the header to allow updating the document on the server (annotations, links, widgets). Requires WebViewer module.</description>
             </property>
         </propertyGroup>
         <propertyGroup caption="License">

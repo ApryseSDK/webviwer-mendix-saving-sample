@@ -19,12 +19,15 @@ export class preview extends Component<WebViewerPreviewProps> {
             loadAsPDF: this.props.loadAsPDF,
             highContrastMode: this.props.highContrastMode,
             notesInLeftPanel: this.props.notesInLeftPanel,
+            enabledElements: this.props.enabledElements,
+            disabledElements: this.props.disabledElements,
             selectAnnotationOnCreation: this.props.selectAnnotationOnCreation,
             enableDarkMode: this.props.enableDarkMode,
             enableFullAPI: this.props.enableFullAPI,
             customCss: this.props.customCss,
             defaultLanguage: this.props.defaultLanguage,
-            l: this.props.l
+            l: this.props.l,
+            enableDocumentUpdates: this.props.enableDocumentUpdates
         };
         return <PDFViewer {...viewerProps} />;
     }
