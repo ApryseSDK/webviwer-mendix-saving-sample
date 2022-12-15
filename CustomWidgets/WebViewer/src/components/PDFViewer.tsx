@@ -1,5 +1,4 @@
 import { createElement, useRef, useEffect, useState } from "react";
-import { unmountComponentAtNode } from "react-dom";
 import viewer, { WebViewerInstance } from "@pdftron/webviewer";
 import WebViewerModuleClient from "../clients/WebViewerModuleClient";
 
@@ -32,25 +31,17 @@ const PDFViewer: React.FC<InputProps> = props => {
     const viewerRef = useRef<HTMLDivElement>(null);
     const [wvInstance, setInstance] = useState<null | WebViewerInstance>(null);
 
-    // Perform clean-up of WV when unmounted forcibly.
+    // Perform clean-up of WV when unmounted
     useEffect(() => {
-        const topWindow = window.top;
         return () => {
             if (wvInstance) {
                 // Disposing WV events
                 wvInstance.UI.dispose();
-                const element = wvInstance.UI.iframeWindow.document.getElementById("app") as Element;
-                // Further remove React component
-                unmountComponentAtNode(element);
-                // This part is necessary as a page refresh is the only way everything gets cleared.
-                // However, the page will show a reload post navigation.
-                if (topWindow) {
-                    topWindow.location.reload();
-                }
             }
         };
     }, [wvInstance]);
 
+    // Mount WV only once
     useEffect(() => {
         viewer(
             {
@@ -71,7 +62,7 @@ const PDFViewer: React.FC<InputProps> = props => {
                 licenseKey: props.l
             },
             viewerRef.current as HTMLDivElement
-        ).then(instance => {
+        ).then((instance: WebViewerInstance) => {
             const { Core, UI } = instance;
 
             setInstance(instance);
@@ -133,11 +124,19 @@ const PDFViewer: React.FC<InputProps> = props => {
         });
     }, [viewer]);
 
+    // Attributes in Mendix may update later, this will load the file after the update
     useEffect(() => {
         if (wvInstance && props.file) {
             wvInstance.UI.loadDocument(props.file);
         }
     }, [wvInstance, props.file]);
+
+    // Attributes in Mendix may update later, this will load the file after the update
+    useEffect(() => {
+        if (wvInstance && props.annotationUser) {
+            wvInstance.Core.annotationManager.setCurrentUser(props.annotationUser);
+        }
+    }, [wvInstance, props.annotationUser]);
 
     return (
         <div
