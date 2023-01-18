@@ -14,8 +14,8 @@ export interface WebViewerContainerProps {
     style?: CSSProperties;
     tabIndex?: number;
     fileUrl: string;
-    fileAttributeUrl?: EditableValue<string>;
-    fileId?: EditableValue<string>;
+    fileUrlAttribute?: EditableValue<string>;
+    fileIdAttribute?: EditableValue<string>;
     enableFilePicker: boolean;
     loadAsPDF: boolean;
     enableFullAPI: boolean;
@@ -39,6 +39,7 @@ export interface WebViewerContainerProps {
     accessibleMode: boolean;
     highContrastMode: boolean;
     enableDocumentUpdates: boolean;
+    enableSaveAsButton: boolean;
     l: string;
 }
 
@@ -48,8 +49,8 @@ export interface WebViewerPreviewProps {
     styleObject?: CSSProperties;
     readOnly: boolean;
     fileUrl: string;
-    fileAttributeUrl: string;
-    fileId: string;
+    fileUrlAttribute: string;
+    fileIdAttribute: string;
     enableFilePicker: boolean;
     loadAsPDF: boolean;
     enableFullAPI: boolean;
@@ -74,5 +75,6 @@ export interface WebViewerPreviewProps {
     accessibleMode: boolean;
     highContrastMode: boolean;
     enableDocumentUpdates: boolean;
+    enableSaveAsButton: boolean;
     l: string;
 }

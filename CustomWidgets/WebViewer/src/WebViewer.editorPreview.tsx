@@ -8,8 +8,9 @@ export class preview extends Component<WebViewerPreviewProps> {
     render(): ReactNode {
         const viewerProps = {
             containerHeight: this.props.containerHeight,
-            fileUrl: this.props.fileAttributeUrl || this.props.fileUrl,
-            fileId: this.props.fileId,
+            fileUrl: this.props.fileUrl,
+            fileUrlAttribute: this.props.fileUrlAttribute,
+            fileIdAttribute: this.props.fileIdAttribute,
             enableFilePicker: this.props.enableFilePicker,
             annotationUser: this.props.annotationUser,
             accessibleMode: this.props.accessibleMode,
@@ -32,7 +33,8 @@ export class preview extends Component<WebViewerPreviewProps> {
             customCss: this.props.customCss,
             defaultLanguage: this.props.defaultLanguage,
             l: this.props.l,
-            enableDocumentUpdates: this.props.enableDocumentUpdates
+            enableDocumentUpdates: this.props.enableDocumentUpdates,
+            enableSaveAsButton: this.props.enableSaveAsButton
         };
         return <PDFViewer {...viewerProps} />;
     }
