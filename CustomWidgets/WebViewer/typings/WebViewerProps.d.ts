@@ -4,9 +4,29 @@
  * @author Mendix Widgets Framework Team
  */
 import { CSSProperties } from "react";
-import { EditableValue } from "mendix";
+import { ActionValue, DynamicValue, EditableValue, FileValue } from "mendix";
 
-export type DefaultLanguageEnum = "en" | "de" | "es" | "fr" | "it" | "el" | "ja" | "ko" | "nl" | "pt_br" | "ru" | "zh_cn" | "zh_tw" | "vi" | "uk" | "id" | "ms" | "bn" | "hi" | "tr";
+export type DefaultLanguageEnum =
+    | "en"
+    | "de"
+    | "es"
+    | "fr"
+    | "it"
+    | "el"
+    | "ja"
+    | "ko"
+    | "nl"
+    | "pt_br"
+    | "ru"
+    | "zh_cn"
+    | "zh_tw"
+    | "vi"
+    | "uk"
+    | "id"
+    | "ms"
+    | "bn"
+    | "hi"
+    | "tr";
 
 export interface WebViewerContainerProps {
     name: string;
@@ -14,10 +34,11 @@ export interface WebViewerContainerProps {
     style?: CSSProperties;
     tabIndex?: number;
     fileUrl: string;
-    fileUrlAttribute?: EditableValue<string>;
-    fileIdAttribute?: EditableValue<string>;
+    file?: DynamicValue<FileValue>;
     enableFilePicker: boolean;
     loadAsPDF: boolean;
+    enablePdfEditing: boolean;
+    enableOfficeEditing: boolean;
     enableFullAPI: boolean;
     annotationUser?: EditableValue<string>;
     enableAnnotations: boolean;
@@ -40,8 +61,9 @@ export interface WebViewerContainerProps {
     highContrastMode: boolean;
     enableDocumentUpdates: boolean;
     enableSaveAsButton: boolean;
-    continueAutoXfdfImport: boolean;
-    autoXfdfImportInterval: number;
+    enableRealTimeAnnotating: boolean;
+    onExportXfdfCommand?: ActionValue;
+    autoXfdfCommandImportInterval: number;
     l: string;
 }
 
@@ -55,10 +77,11 @@ export interface WebViewerPreviewProps {
     styleObject?: CSSProperties;
     readOnly: boolean;
     fileUrl: string;
-    fileUrlAttribute: string;
-    fileIdAttribute: string;
+    file: string;
     enableFilePicker: boolean;
     loadAsPDF: boolean;
+    enablePdfEditing: boolean;
+    enableOfficeEditing: boolean;
     enableFullAPI: boolean;
     annotationUser: string;
     enableAnnotations: boolean;
@@ -82,7 +105,8 @@ export interface WebViewerPreviewProps {
     highContrastMode: boolean;
     enableDocumentUpdates: boolean;
     enableSaveAsButton: boolean;
-    continueAutoXfdfImport: boolean;
-    autoXfdfImportInterval: number | null;
+    enableRealTimeAnnotating: boolean;
+    onExportXfdfCommand: {} | null;
+    autoXfdfCommandImportInterval: number | null;
     l: string;
 }
