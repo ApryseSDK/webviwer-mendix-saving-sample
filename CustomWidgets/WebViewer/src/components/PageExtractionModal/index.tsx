@@ -72,9 +72,9 @@ class PageExtractionModal extends React.Component<PageExtractionModalInputProps,
                 pageInput: `${this.state.pageInput},${pageNumber}`
             });
         } else {
-            this.setState({
-                pageInput: this.parsePageInputString(this.state.pageInput.replace(`${pageNumber}`, ""))
-            });
+            const parsedInput = this.parsePageInputString(this.state.pageInput.replace(`${pageNumber}`, ""));
+            this.setState({ pageInput: parsedInput });
+            this.trigger(parsedInput);
         }
     };
     parsePageInputString = (input: string) => {
@@ -162,7 +162,7 @@ class PageExtractionModal extends React.Component<PageExtractionModalInputProps,
             handlers.forEach(handler => handler(input))
         );
     };
-    loadThumbnail = (pageNumber: number) => {
+    renderThumbnail = (pageNumber: number) => {
         return (
             <PageExtractionThumbnail
                 wvInstance={this.props.wvInstance}
@@ -256,7 +256,7 @@ class PageExtractionModal extends React.Component<PageExtractionModalInputProps,
                         <VirtualList
                             height="400px"
                             padding={13}
-                            render={this.loadThumbnail}
+                            render={this.renderThumbnail}
                             items={this.state.pageCount}
                         />
                         <div style={{ display: "flex", flexDirection: "row", marginTop: "1em" }}>

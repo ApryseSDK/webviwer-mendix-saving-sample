@@ -8,6 +8,7 @@
     "calibrate": "ক্যালিব্রেট করুন",
     "cancel": "বাতিল করুন",
     "confirm": "নিশ্চিত করুন",
+    "currentPageIs": "বর্তমান পৃষ্ঠা হল",
     "clear": "স্পষ্ট",
     "clearAll": "সব পরিষ্কার করে দাও",
     "close": "বন্ধ",
@@ -20,11 +21,13 @@
     "paste": "পেস্ট করুন",
     "pasteWithoutFormatting": "বিন্যাস ছাড়া পেস্ট করুন",
     "delete": "মুছে ফেলা",
+    "deleted": "মুছে ফেলা হয়েছে",
     "group": "গ্রুপ",
     "ungroup": "আনগ্রুপ করুন",
     "download": "ডাউনলোড করুন",
     "edit": "সম্পাদনা করুন",
     "extract": "নির্যাস",
+    "extractPage": "পৃষ্ঠা এক্সট্র্যাক্ট করুন",
     "enterFullscreen": "পূর্ণ পর্দা",
     "exitFullscreen": "পূর্ণ পর্দা সরান",
     "fit": "ফিট",
@@ -32,6 +35,7 @@
     "fitToWidth": "প্রস্থে মাপসই",
     "more": "আরও",
     "openFile": "খোলা ফাইল",
+    "page": "পাতা",
     "pagePrev": "আগের পৃষ্ঠা",
     "pageNext": "পরবর্তী পৃষ্ঠা",
     "pageSet": "পৃষ্ঠা সেট করুন",
@@ -44,6 +48,12 @@
     "rotate3D": "আবর্তিত",
     "rotateClockwise": "ঘড়ির কাঁটার দিকে ঘোরান",
     "rotateCounterClockwise": "বামাবর্তে ঘোরাতে",
+    "rotatedClockwise": "ঘড়ির কাঁটার দিকে ঘোরানো",
+    "rotatedCounterClockwise": "ঘড়ির কাঁটার বিপরীত দিকে ঘোরানো",
+    "rotationIs": "বর্তমান পৃষ্ঠা ঘূর্ণন হয়",
+    "movedToBottomOfDocument": "নথির নীচে সরানো হয়েছে",
+    "movedToTopofDocument": "নথির শীর্ষে সরানো হয়েছে",
+    "extracted": "নিষ্কাশিত",
     "save": "সংরক্ষণ",
     "post": "পোস্ট",
     "create": "সৃষ্টি",
@@ -56,11 +66,13 @@
     "zoomIn": "প্রসারিত করো",
     "zoomOut": "ছোট করা",
     "zoomSet": "জুম সেট করুন",
+    "zoomChanged": "বর্তমান জুম হয়",
     "zoomControls": "জুম নিয়ন্ত্রণ",
     "draw": "আঁকা",
     "type": "টাইপ",
     "upload": "আপলোড করুন",
     "link": "লিঙ্ক",
+    "unlink": "লিঙ্ক মুছুন",
     "fileAttachmentDownload": "সংযুক্ত ফাইল ডাউনলোড করুন",
     "prevResult": "পূর্ববর্তী ফলাফল",
     "nextResult": "পরবর্তী ফলাফল",
@@ -71,12 +83,18 @@
     "exit": "প্রস্থান করুন",
     "addOption": "বিকল্প যোগ করুন",
     "formFieldEdit": "ফর্ম ক্ষেত্র সম্পাদনা করুন",
+    "formFieldEditMode": "ফর্ম ক্ষেত্র সম্পাদনা করুন",
+    "contentEditMode": "বিষয়বস্তু সম্পাদনা করুন",
     "viewShortCutKeysFor3D": "শর্টকাট কী দেখুন",
     "markAllRead": "সবগুলো পঠিত বলে সনাক্ত কর",
+    "pageInsertion": "পৃষ্ঠা সন্নিবেশ",
     "insertPage": "পৃষ্ঠা সন্নিবেশ",
     "insert": "ঢোকান",
     "pageManipulation": "পৃষ্ঠা ম্যানিপুলেশন",
     "replace": "প্রতিস্থাপন করুন",
+    "replacePage": "পৃষ্ঠা প্রতিস্থাপন করুন",
+    "modal": "মডেল",
+    "isOpen": "খোলা",
     "setDestination": "লক্ষ ঠিক করো",
     "showLess": "প্রদর্শন কম",
     "showMore": "...আরো",
@@ -89,6 +107,8 @@
     "select": "নির্বাচন করুন",
     "moveToTop": "উপরে সরান",
     "moveToBottom": "নীচে সরান",
+    "movePageToTop": "পৃষ্ঠাটি শীর্ষে সরান৷",
+    "movePageToBottom": "পৃষ্ঠাটি নীচে সরান",
     "backToMenu": "মেনুতে ফিরে যান",
     "redactPages": "পৃষ্ঠাগুলি সংশোধন করুন",
     "playAudio": "অডিও চালান",
@@ -100,9 +120,16 @@
     "multiReplyAnnotations": "নির্বাচিত টীকাগুলির উত্তর দিন ({{count}})",
     "comparePages": "পৃষ্ঠাগুলির তুলনা করুন",
     "startComparison": "তুলনা শুরু করুন",
+    "showComparison": "তুলনা দেখান",
     "back": "পেছনে",
     "clearSignature": "সাফ স্বাক্ষর",
-    "newDocument": "নতুন নথি"
+    "readOnlySignature": "শুধুমাত্র পঠনযোগ্য স্বাক্ষর মুছে ফেলা যাবে না",
+    "newDocument": "নতুন নথি",
+    "sideBySideView": "সাইড বাই সাইড ভিউ",
+    "pageNumberInput": "পৃষ্ঠা নম্বর ইনপুট",
+    "addNewColor": "নতুন রঙ যোগ করুন",
+    "deleteColor": "নির্বাচিত রঙ মুছুন",
+    "copySelectedColor": "নির্বাচিত রঙ অনুলিপি করুন"
   },
   "annotation": {
     "areaMeasurement": "এলাকা",
@@ -116,6 +143,8 @@
     "formFillCheckmark": "টিক",
     "formFillCross": "ক্রস",
     "distanceMeasurement": "দূরত্ব",
+    "rectangularAreaMeasurement": "আয়তক্ষেত্রাকার এলাকা",
+    "ellipseMeasurement": "উপবৃত্ত এলাকা",
     "countMeasurement": "পরিমাপ গণনা",
     "ellipse": "উপবৃত্ত",
     "eraser": "ইরেজার",
@@ -136,6 +165,7 @@
     "redact": "সংশোধিত",
     "formFillDot": "ডট",
     "signature": "স্বাক্ষর",
+    "snipping": "স্নিপিং টুল",
     "squiggly": "স্কুইগ্লি",
     "stamp": "ছাপ",
     "stickyNote": "বিঃদ্রঃ",
@@ -223,6 +253,8 @@
     "watermarkPanel": "ওয়াটারমার্ক প্যানেল"
   },
   "message": {
+    "showMore": "আরো দেখুন",
+    "showLess": "প্রদর্শন কম",
     "toolsOverlayNoPresets": "কোনো প্রিসেট নেই",
     "badDocument": "নথি লোড করতে ব্যর্থ হয়েছে৷ নথিটি হয় দূষিত বা বৈধ নয়।",
     "customPrintPlaceholder": "যেমন 3, 4-10",
@@ -238,6 +270,7 @@
     "noAttachments": "এই নথিতে কোন সংযুক্তি নেই.",
     "noResults": "কোন ফলাফল পাওয়া যায়নি.",
     "numResultsFound": "ফলাফল পাওয়া গেছে",
+    "loadError": "নথি লোড করার সময় ত্রুটি৷",
     "notSupported": "যে ফাইল টাইপ সমর্থিত নয়.",
     "passwordRequired": "পাসওয়ার্ড প্রয়োজন",
     "enterPasswordPlaceholder": "পাসওয়ার্ড লিখুন",
@@ -257,9 +290,7 @@
     "errorEnterMeasurement": "আপনি যে নম্বরটি লিখেছেন সেটি অবৈধ, আপনি 7.5 বা 7 1/2 এর মতো মান লিখতে পারেন",
     "linkURLorPage": "লিঙ্ক URL বা একটি পৃষ্ঠা",
     "warning": "সতর্কতা",
-    "enterContentEditingMode": "আপনি বিষয়বস্তু সম্পাদনা মোডে প্রবেশ করতে চলেছেন৷",
-    "existingAnnotationWarning": "বিদ্যমান টীকাগুলি সম্পাদনা করার পরে পাঠ্যের সাথে নাও মিলতে পারে।",
-    "changesCannotBeUndone": "করা কোনো পরিবর্তন পূর্বাবস্থায় ফেরানো যাবে না.",
+    "svgMalicious": "নিরাপত্তার জন্য SVG স্ক্রিপ্ট উপেক্ষা করা হয়েছে",
     "doNotShowAgain": "পরবর্তীতে এটি আর আমাকে দেখাবেন না",
     "doNotAskAgain": "আবার জিঙ্গাসা করবে না",
     "enterReplacementText": "আপনি যে পাঠ্যটি প্রতিস্থাপন করতে চান তা লিখুন",
@@ -268,6 +299,8 @@
     "unpostedComment": "পোস্ট না করা মন্তব্য",
     "lockedLayer": "স্তর লক করা আছে",
     "layerVisibililtyNoChange": "স্তর দৃশ্যমানতা পরিবর্তন করা যাবে না",
+    "noLayers": "এই নথিতে কোন স্তর নেই।",
+    "noSignatureFields": "এই নথিতে কোন স্বাক্ষর ক্ষেত্র নেই।",
     "untitled": "শিরোনামহীন",
     "selectHowToLoadFile": "কীভাবে আপনার নথি লোড করবেন তা নির্বাচন করুন",
     "openFileByUrl": "URL দ্বারা ফাইল খুলুন:",
@@ -339,6 +372,10 @@
     },
     "colorPalette": {
       "colorLabel": "রঙ"
+    },
+    "colorPalettePicker": {
+      "addColor": "নতুন রঙ যোগ করুন",
+      "selectColor": "রঙ নির্বাচন করুন"
     },
     "displayMode": {
       "layout": "পৃষ্ঠা বিন্যাস",
@@ -433,12 +470,10 @@
       "drawSignature": "স্বাক্ষর আঁক*",
       "drawInitial": "আঁকুন আদ্যক্ষর*",
       "pickInitialsFile": "আদ্যক্ষর নির্বাচন করুন",
-      "noSignatures": "বর্তমানে কোনো সংরক্ষিত স্বাক্ষর নেই।"
+      "noSignatures": "বর্তমানে কোনো সংরক্ষিত স্বাক্ষর নেই।",
+      "fontStyle": "ফন্ট-স্টাইল"
     },
     "pageReplacementModal": {
-      "dragAndDrop": "এখানে আপনার ফাইল টানুন এবং ড্রপ করুন",
-      "selectFile": "এখানে আপনার ফাইল নির্বাচন করুন",
-      "or": "বা",
       "yourFiles": "আপনার ফাইল",
       "chooseFile": "একটি ফাইল নির্বাচন করুন",
       "localFile": "স্থানীয় ফাইল",
@@ -485,6 +520,9 @@
       "count": "গণনা",
       "length": "দৈর্ঘ্য"
     },
+    "freeTextOption": {
+      "autoSizeFont": "গতিশীলভাবে ফন্টের আকার স্কেল করুন"
+    },
     "measurementOption": {
       "scale": "স্কেল"
     },
@@ -522,10 +560,20 @@
         "ifToContinue": "আপনি কি চালিয়ে যাওয়ার বিষয়ে নিশ্চিত?"
       }
     },
+    "contentEdit": {
+      "deletionModal": {
+        "title": "কন্টেন্ট মুছুন",
+        "message": "আপনি কি নির্বাচিত বিষয়বস্তু মুছতে চান? এটি পূর্বাবস্থায় ফেরানো যাবে না।"
+      },
+      "digitalSign": {
+        "title": "সতর্কতা সিল করা নথি",
+        "message": "এই নথিতে স্বাক্ষর করা হয়েছে এবং পরিবর্তন বা পরিবর্তন করা যাবে না।"
+      }
+    },
     "stylePopup": {
       "textStyle": "পাঠ্য শৈলী",
       "colors": "রং",
-      "invalidFontSize": "ফন্ট সাইজ এর থেকে কম হতে হবে",
+      "invalidFontSize": "হরফের আকার অবশ্যই নিম্নলিখিত সীমার মধ্যে হতে হবে",
       "labelText": "লেবেল পাঠ্য",
       "labelTextPlaceholder": "লেবেল পাঠ্য যোগ করুন"
     },
@@ -567,7 +615,12 @@
     "thumbnailPanel": {
       "delete": "মুছে ফেলা",
       "rotateClockwise": "ঘড়ির কাঁটার দিকে",
-      "rotateCounterClockwise": "ঘড়ির কাঁটার বিপরীত দিকে"
+      "rotateCounterClockwise": "ঘড়ির কাঁটার বিপরীত দিকে",
+      "rotatePageClockwise": "পৃষ্ঠা ঘড়ির কাঁটার দিকে ঘোরান",
+      "rotatePageCounterClockwise": "পৃষ্ঠা ঘড়ির কাঁটার বিপরীত দিকে ঘোরান",
+      "moreOptions": "আরও বিকল্প",
+      "moreOptionsMenu": "আরও থাম্বনেল বিকল্প মেনু",
+      "enterPageNumbers": "নির্বাচন করতে পৃষ্ঠা নম্বর লিখুন"
     },
     "thumbnailsControlOverlay": {
       "move": "পৃষ্ঠাগুলি সরান"
@@ -728,6 +781,9 @@
       "deleteTitle": "কাস্টম রঙ মুছুন",
       "deleteMessage": "নির্বাচিত কাস্টম রঙ মুছবেন? এটি আপনার রঙ প্যালেট থেকে সরানো হবে।"
     },
+    "colorPalettePicker": {
+      "deleteTitle": "কাস্টম রঙ মুছুন"
+    },
     "multiDeleteAnnotation": {
       "title": "টীকা মুছবেন?",
       "message": "মুছে ফেললে সমস্ত মন্তব্য, উত্তর এবং গ্রুপিং মুছে যাবে এবং পূর্বাবস্থায় ফেরানো যাবে না।\n\n আপনি কি এই টীকাগুলি মুছে ফেলার বিষয়ে নিশ্চিত?"
@@ -739,7 +795,7 @@
     },
     "connectToURL": {
       "title": "নিরাপত্তা সতর্কতা",
-      "message": "এই নথিতে সংযোগ করার চেষ্টা করছে:\n\n{{- উরি}}।\n\n আপনি যদি এই নথিতে বিশ্বাস করেন তবে এটি খুলতে নিশ্চিত করুন ক্লিক করুন৷"
+      "message": "এই নথিতে সংযোগ করার চেষ্টা করছে:\n\n{{- uri}}\n\n আপনি যদি এই নথিতে বিশ্বাস করেন তবে এটি খুলতে নিশ্চিত করুন ক্লিক করুন৷"
     }
   },
   "shortcut": {
@@ -760,7 +816,7 @@
     "select": "(প্রস্থান)",
     "signature": "(এস)",
     "squiggly": "(ছ)",
-    "image": "(আমি)",
+    "image": "(I)",
     "redo": "(Ctrl Shift Z)",
     "redo_windows": "(Ctrl Y)",
     "undo": "(Ctrl Z)",
@@ -1032,6 +1088,18 @@
       "cancelMessage": "আপনি কি নিশ্চিত যে আপনি সমস্ত নির্বাচিত পৃষ্ঠা ক্রপ করা বাতিল করতে চান?"
     }
   },
+  "snippingPopUp": {
+    "title": "স্নিপিং টুল",
+    "clipboard": "ক্লিপবোর্ডে কপি করুন",
+    "download": "ডাউনলোড",
+    "cropAndRemove": "ক্রপ এবং সরানো",
+    "snippingModal": {
+      "applyTitle": "স্নিপিং প্রয়োগ করুন?",
+      "applyMessage": "এই ক্রিয়াটি নির্দিষ্ট এলাকাটি চিরকালের জন্য কাটবে এবং অন্যান্য পৃষ্ঠাগুলি সরাবে। এটি ফিরে পাওয়া যাবে না।",
+      "cancelTitle": "স্নিপিং বাতিল করতে?",
+      "cancelMessage": "আপনি কি নিশ্চিত যে আপনি স্নিপিং বন্ধ করতে চান?"
+    }
+  },
   "textEditingPanel": {
     "paragraph": "অনুচ্ছেদ",
     "text": "পাঠ্য"
@@ -1074,6 +1142,26 @@
     "watermarkOptions": "ওয়াটারমার্ক বিকল্প",
     "watermarks": "জলছাপ"
   },
+  "portfolio": {
+    "createPDFPortfolio": "PDF পোর্টফোলিও তৈরি করুন",
+    "uploadFiles": "ফাইল আপলোড",
+    "uploadFolder": "আপলোড ফোল্ডার",
+    "addFiles": "ফাইল যোগ করুন",
+    "addFile": "নথি যুক্ত করা",
+    "addFolder": "ফোল্ডার যোগ করুন",
+    "createFolder": "ফোল্ডার তৈরি করুন",
+    "portfolioPanelTitle": "পিডিএফ পোর্টফোলিও",
+    "portfolioNewFolder": "নতুন ফোল্ডার",
+    "portfolioFolderPlaceholder": "ফোল্ডারের নাম",
+    "portfolioFilePlaceholder": "ফাইলের নাম",
+    "folderNameAlreadyExists": "ফোল্ডারের নাম আগে থেকেই আছে",
+    "fileNameAlreadyExists": "ফাইলের নাম আগে থেকেই আছে",
+    "openFile": "নতুন ট্যাবে খুলুন",
+    "fileAlreadyExists": "ফাইল ইতিমধ্যে বিদ্যমান",
+    "fileAlreadyExistsMessage": "পোর্টফোলিওতে \"{{fileName}}\" ফাইলটি আগে থেকেই আছে।",
+    "deletePortfolio": "আপনি কি \"{{fileName}}\" মুছতে চান?",
+    "reselect": "পুনরায় নির্বাচন করুন"
+  },
   "languageModal": {
     "selectLanguage": "ভাষা নির্বাচন কর"
   },
@@ -1089,9 +1177,18 @@
     "lineSpacing": "লাইন এবং অনুচ্ছেদের ব্যবধান",
     "bulletList": "বুলেটযুক্ত তালিকা",
     "numberList": "সংখ্যাযুক্ত তালিকা",
+    "decreaseIndent": "ঘটণা হ্রাস",
+    "increaseIndent": "ইন্ডেন্ট বাড়ান",
     "insertLink": "লিঙ্ক ঢোকান",
     "insertImage": "ছবি ঢোকান",
-    "notAvailableInDemoMode": "ডেমো মোডে উপলব্ধ নয়",
+    "table": "টেবিল",
+    "insertRowAbove": "উপরে সারি ঢোকান",
+    "insertRowBelow": "নীচে সারি সন্নিবেশ করান",
+    "insertColumnRight": "ডানদিকে কলাম সন্নিবেশ করুন",
+    "insertColumnLeft": "বাম দিকে কলাম সন্নিবেশ করুন",
+    "deleteRow": "সারি মুছুন",
+    "deleteColumn": "কলাম মুছুন",
+    "deleteTable": "টেবিল মুছুন",
     "notSupportedOnMobile": "অফিস সম্পাদনা মোবাইল ডিভাইসে সমর্থিত নয়।"
   },
   "insertPageModal": {
@@ -1176,6 +1273,44 @@
     "watermark": "জলছাপ",
     "addWatermark": "জলছাপ যোগ করুন",
     "save": "ফাইল সংরক্ষণ",
-    "pageError": "অবৈধ পৃষ্ঠা। বৈধ পৃষ্ঠা পরিসীমা 1-এর মধ্যে"
+    "pageError": "অবৈধ পৃষ্ঠা। বৈধ পৃষ্ঠা পরিসীমা 1-এর মধ্যে",
+    "fileNameCannotBeEmpty": "ফাইলের নাম খালি থাকতে পারে না"
+  },
+  "filePicker": {
+    "dragAndDrop": "এখানে আপনার ফাইল টানুন এবং ড্রপ করুন",
+    "selectFile": "এখানে আপনার ফাইল নির্বাচন করুন",
+    "or": "বা"
+  },
+  "stylePanel": {
+    "headings": {
+      "styles": "শৈলী",
+      "annotation": "টীকা",
+      "annotations": "টীকা",
+      "tool": "টুল",
+      "textStyles": "পাঠ্য শৈলী",
+      "currentColor": "বর্তমান রঙ",
+      "customColors": "কাস্টম রং",
+      "redactionTextLabel": "টেক্সট লেবেল",
+      "redactionMarkOutline": "আউটলাইন চিহ্নিত করুন",
+      "redactionFill": "রিডাকশন কালার",
+      "redactionTextPlaceholder": "টেক্সট লেবেল ঢোকান",
+      "contentEdit": "বিষয়বস্তু সম্পাদনা"
+    },
+    "addColorToCustom": "কাস্টম রং যোগ করুন",
+    "noToolSelected": "টুল বৈশিষ্ট্য দেখতে একটি টুল নির্বাচন করুন",
+    "noToolStyle": "টুলে কোনো স্টাইলিং বৈশিষ্ট্য নেই।"
+  },
+  "signatureListPanel": {
+    "header": "স্বাক্ষর তালিকা",
+    "newSignature": "নতুন স্বাক্ষর",
+    "newSignatureAndInitial": "নতুন স্বাক্ষর এবং প্রাথমিক",
+    "signatureList": {
+      "signature": "স্বাক্ষর",
+      "initials": "আদ্যক্ষর"
+    }
+  },
+  "rubberStampPanel": {
+    "header": "স্ট্যাম্প",
+    "standard": "স্ট্যান্ডার্ড স্ট্যাম্প"
   }
 }
