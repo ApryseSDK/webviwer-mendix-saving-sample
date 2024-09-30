@@ -123,13 +123,17 @@
     "showComparison": "แสดงการเปรียบเทียบ",
     "back": "กลับ",
     "clearSignature": "ลายเซ็นที่ชัดเจน",
+    "clearInitial": "ล้างอักษรตัวแรก",
     "readOnlySignature": "ลายเซ็นแบบอ่านอย่างเดียวไม่สามารถลบได้",
     "newDocument": "เอกสารใหม่",
     "sideBySideView": "มุมมองด้านข้าง",
     "pageNumberInput": "การป้อนหมายเลขหน้า",
     "addNewColor": "เพิ่มสีใหม่",
     "deleteColor": "ลบสีที่เลือก",
-    "copySelectedColor": "คัดลอกสีที่เลือก"
+    "copySelectedColor": "คัดลอกสีที่เลือก",
+    "showMoreColors": "แสดงสีเพิ่มเติม",
+    "showLessColors": "แสดงสีน้อยลง",
+    "fromCustomColorPicker": "จากเครื่องมือเลือกสีที่กำหนดเอง"
   },
   "annotation": {
     "areaMeasurement": "พื้นที่",
@@ -185,7 +189,8 @@
     "3D": "3D",
     "sound": "เสียง",
     "changeView": "เปลี่ยนมุมมอง",
-    "newImage": "ภาพใหม่"
+    "newImage": "ภาพใหม่",
+    "defaultCustomStampTitle": "ตราประทับที่กำหนดเอง"
   },
   "rubberStamp": {
     "Approved": "ที่ได้รับการอนุมัติ",
@@ -222,7 +227,7 @@
     "notesPanel": "ความคิดเห็น",
     "outlinePanel": "เค้าร่าง",
     "outlinesPanel": "โครงร่าง",
-    "newOutlineTitle": "ชื่อเค้าร่างใหม่",
+    "newOutlineTitle": "ชื่อโครงร่างใหม่",
     "outlineTitle": "ชื่อเค้าร่าง",
     "destination": "ปลายทาง",
     "bookmarkPanel": "บุ๊คมาร์ค",
@@ -283,9 +288,11 @@
     "searching": "กำลังค้นหา...",
     "searchCommentsPlaceholder": "ค้นหาความคิดเห็น",
     "searchDocumentPlaceholder": "ค้นหาเอกสาร",
+    "searchSuggestionsPlaceholder": "คำแนะนำการค้นหา",
     "signHere": "ลงชื่อที่นี่",
     "insertTextHere": "ใส่ข้อความที่นี่",
     "imageSignatureAcceptedFileTypes": "ยอมรับเฉพาะ {{acceptedFileTypes}} เท่านั้น",
+    "signatureRequired": "จำเป็นต้องมีลายเซ็นและชื่อย่อเพื่อดำเนินการต่อ",
     "enterMeasurement": "ป้อนการวัดระหว่างจุดสองจุด",
     "errorEnterMeasurement": "ตัวเลขที่คุณป้อนไม่ถูกต้อง คุณสามารถป้อนค่าเช่น 7.5 หรือ 7 1/2",
     "linkURLorPage": "ลิงค์ URL หรือเพจ",
@@ -294,6 +301,7 @@
     "doNotShowAgain": "อย่าแสดงให้ฉันเห็นอีก",
     "doNotAskAgain": "อย่าถามอีก",
     "enterReplacementText": "ป้อนข้อความที่คุณต้องการแทนที่",
+    "sort": "เรียงลำดับ",
     "sortBy": "เรียงลำดับ",
     "emptyCustomStampInput": "ข้อความประทับตราต้องไม่เว้นว่างไว้",
     "unpostedComment": "ความคิดเห็นที่ยังไม่ได้โพสต์",
@@ -309,11 +317,13 @@
     "selectFile": "เลือกไฟล์",
     "selectPageToReplace": "เลือกหน้าในเอกสารที่คุณต้องการแทนที่ด้วย",
     "embeddedFiles": "ไฟล์ที่ฝังตัว",
-    "pageNum": "เลขหน้า",
+    "pageNum": "หน้าหนังสือ",
     "viewBookmark": "ดูบุ๊กมาร์กบนเพจ",
     "error": "ข้อผิดพลาด",
     "errorPageNumber": "หมายเลขหน้าไม่ถูกต้อง ขีดจำกัดคือ",
-    "errorLoadingDocument": "เกิดปัญหาในการอ่านเอกสารนี้และบางหน้าอาจไม่แสดง นี่แสดงว่าเอกสารอาจเสียหาย จำนวนหน้าทั้งหมดคือ {{totalPageCount}} และจำนวนหน้าที่แสดงคือ {{displayedPageCount}}"
+    "errorBlankPageNumber": "กรุณาระบุหมายเลขหน้า",
+    "errorLoadingDocument": "เกิดปัญหาในการอ่านเอกสารนี้และบางหน้าอาจไม่แสดง นี่แสดงว่าเอกสารอาจเสียหาย จำนวนหน้าทั้งหมดคือ {{totalPageCount}} และจำนวนหน้าที่แสดงคือ {{displayedPageCount}}",
+    "noRevisions": "เอกสารนี้ไม่มีการแก้ไข"
   },
   "option": {
     "type": {
@@ -363,7 +373,10 @@
       "toolbarGroup-EditText": "แก้ไขข้อความ",
       "toolbarGroup-FillAndSign": "กรอกและลงชื่อ",
       "toolbarGroup-Forms": "แบบฟอร์ม",
-      "toolbarGroup-Redact": "Redact"
+      "toolbarGroup-Redact": "Redact",
+      "toolbarGroup-oe-Home": "บ้าน",
+      "toolbarGroup-oe-Insert": "แทรก",
+      "toolbarGroup-oe-Review": "ทบทวน"
     },
     "annotationColor": {
       "StrokeColor": "จังหวะ",
@@ -405,7 +418,8 @@
       "noteContent": {
         "noName": "(ไม่มีชื่อ)",
         "noDate": "(ไม่มีวัน)"
-      }
+      },
+      "toggleMultiSelect": "สลับการเลือกหลายรายการสำหรับคำอธิบายประกอบ"
     },
     "pageTransition": {
       "continuous": "หน้าต่อเนื่อง",
@@ -424,7 +438,8 @@
       "includeAnnotations": "รวมคำอธิบายประกอบ",
       "includeComments": "รวมความคิดเห็น",
       "printSettings": "การตั้งค่าการพิมพ์",
-      "printGrayscale": "พิมพ์โทนสีเทา"
+      "printGrayscale": "พิมพ์โทนสีเทา",
+      "printCurrentDisabled": "มุมมองปัจจุบันใช้ได้เฉพาะเมื่อดูหน้าเดียวเท่านั้น"
     },
     "printInfo": {
       "author": "ผู้เขียน",
@@ -469,6 +484,8 @@
       "typeInitial": "พิมพ์ชื่อย่อ*",
       "drawSignature": "วาดลายเซ็น*",
       "drawInitial": "วาดชื่อย่อ*",
+      "imageSignature": "ลายเซ็นรูปภาพ",
+      "imageInitial": "ชื่อย่อของรูปภาพ",
       "pickInitialsFile": "เลือกชื่อย่อ",
       "noSignatures": "ขณะนี้ไม่มีลายเซ็นที่บันทึกไว้",
       "fontStyle": "รูปแบบตัวอักษร"
@@ -518,7 +535,9 @@
       "countMeasurement": "นับการวัด",
       "radius": "รัศมี",
       "count": "นับ",
-      "length": "ความยาว"
+      "length": "ความยาว",
+      "xAxis": "แกน X",
+      "yAxis": "แกน Y"
     },
     "freeTextOption": {
       "autoSizeFont": "ปรับขนาดตัวอักษรแบบไดนามิก"
@@ -536,7 +555,8 @@
         "paperUnits": "หน่วยกระดาษ",
         "displayUnits": "หน่วยแสดงผล",
         "fractionUnitsTooltip": "หน่วยเศษส่วนใช้กับ in และ ft-in . เท่านั้น",
-        "incorrectSyntax": "ไวยากรณ์ไม่ถูกต้อง"
+        "incorrectSyntax": "ไวยากรณ์ไม่ถูกต้อง",
+        "units": "หน่วย"
       },
       "scaleOverlay": {
         "addNewScale": "เพิ่มมาตราส่วนใหม่",
@@ -555,6 +575,7 @@
         "irreversible": "กลับไม่ได้",
         "willDeleteMeasurement": "และจะลบการวัดที่เกี่ยวข้อง",
         "confirmDelete": "คุณแน่ใจหรือไม่ว่าต้องการลบมาตราส่วนนี้",
+        "thisCantBeUndone": " การดำเนินการนี้ไม่สามารถยกเลิกได้",
         "ifChangeScale": "หากคุณเปลี่ยนมาตราส่วนสำหรับการวัดหรือเครื่องมือที่เลือก มาตราส่วน",
         "notUsedWillDelete": " จะไม่ถูกใช้โดยการวัดหรือเครื่องมือใดๆ อีกต่อไป และจะถูกลบ การลบจะย้อนกลับไม่ได้",
         "ifToContinue": "คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อ"
@@ -620,7 +641,9 @@
       "rotatePageCounterClockwise": "หมุนหน้าทวนเข็มนาฬิกา",
       "moreOptions": "ตัวเลือกเพิ่มเติม",
       "moreOptionsMenu": "เมนูตัวเลือกรูปขนาดย่อเพิ่มเติม",
-      "enterPageNumbers": "ใส่หมายเลขหน้าเพื่อเลือก"
+      "enterPageNumbers": "ใส่หมายเลขหน้าเพื่อเลือก",
+      "multiSelectPages": "เลือกหลายหน้า",
+      "multiSelectPagesExample": "เช่น. 1, 3, 5-10"
     },
     "thumbnailsControlOverlay": {
       "move": "ย้ายหน้า"
@@ -662,8 +685,7 @@
       "current": "หน้าปัจจุบัน",
       "specify": "ระบุหน้า",
       "odd": "หน้าคี่เท่านั้น",
-      "even": "แม้แต่เพจเท่านั้น",
-      "header": "ทำเครื่องหมายหน้า Redaction"
+      "even": "แม้แต่เพจเท่านั้น"
     },
     "lineStyleOptions": {
       "title": "สไตล์"
@@ -715,6 +737,7 @@
       "redoChange": "ทำซ้ำการเปลี่ยนแปลงคำอธิบายประกอบ",
       "openFile": "เปิดตัวเลือกไฟล์",
       "openSearch": "เปิดการซ้อนทับการค้นหา",
+      "zoomOptions": "ตัวเลือกการซูม",
       "zoomIn": "ขยายเข้า",
       "zoomOut": "ซูมออก",
       "fitScreenWidth": "ปรับเอกสารให้พอดีกับความกว้างของหน้าจอในหน้าจอขนาดเล็ก (< 640px) มิฉะนั้น ให้พอดีกับขนาดดั้งเดิม",
@@ -746,13 +769,14 @@
       "editKeyboardShorcut": "แก้ไขแป้นพิมพ์ลัด",
       "setShorcut": "ตั้งค่าทางลัด",
       "pressKeyToSet": "กดปุ่มหรือปุ่มเพื่อตั้งค่าทางลัดใหม่",
-      "shortcutAlreadyExists": "แป้นพิมพ์ลัดด้านบนมีอยู่แล้ว"
+      "shortcutAlreadyExists": "แป้นพิมพ์ลัดด้านบนมีอยู่แล้ว",
+      "close": "ปิดคำแนะนำเครื่องมือ"
     }
   },
   "warning": {
     "deletePage": {
       "deleteTitle": "ลบหน้า",
-      "deleteMessage": "คุณแน่ใจหรือไม่ว่าต้องการลบหน้าที่เลือก นี้ไม่สามารถยกเลิกได้",
+      "deleteMessage": "คุณแน่ใจหรือไม่ว่าต้องการลบหน้าที่เลือก การดำเนินการนี้ไม่สามารถยกเลิกได้",
       "deleteLastPageMessage": "คุณไม่สามารถลบหน้าทั้งหมดในเอกสารได้"
     },
     "extractPage": {
@@ -837,6 +861,7 @@
   "tool": {
     "pan": "กระทะ",
     "select": "เลือก",
+    "selectAnOption": "เลือกตัวเลือก",
     "Marquee": "กระโจมซูม",
     "Link": "ลิงค์ URL หรือเพจ",
     "Standard": "มาตรฐาน",
@@ -846,7 +871,10 @@
     "url": "URL",
     "page": "หน้าหนังสือ",
     "enterurl": "ป้อน URL ที่คุณต้องการเชื่อมโยงไปยัง",
-    "enterpage": "เลือกหมายเลขหน้าที่คุณต้องการลิงค์ไป",
+    "enterUrlAlt": "ป้อน URL",
+    "insertLink": "ใส่ลิงค์",
+    "insertLinkOrPage": "แทรกลิงค์หรือเพจ",
+    "enterpage": "กรอกหมายเลขหน้าที่คุณต้องการลิงค์ไป",
     "urlLink": "ลิงค์ URL"
   },
   "Model3D": {
@@ -859,8 +887,9 @@
     "enterUrlOrChooseFile": "ป้อน URL หรือเลือกไฟล์ที่จะโหลดลงใน WebViewer",
     "enterUrl": "ป้อน URL ไฟล์",
     "extension": "นามสกุลไฟล์",
-    "existingFile": "ไฟล์เปิดอยู่แล้ว",
-    "addTab": "เพิ่มแท็บ"
+    "existingFile": "ไฟล์ถูกเปิดอยู่แล้ว",
+    "addTab": "เพิ่มแท็บ",
+    "newTab": "แท็บใหม่"
   },
   "datePicker": {
     "previousMonth": "เดือนที่แล้ว",
@@ -959,6 +988,18 @@
       "listbox": "กล่องรายการ",
       "combobox": "กล่องคอมโบ"
     }
+  },
+  "alignmentPopup": {
+    "alignment": "จัดตำแหน่ง",
+    "alignLeft": "จัดชิดซ้าย",
+    "alignHorizontalCenter": "จัดแนวกึ่งกลางแนวนอน",
+    "alignVerticalCenter": "จัดแนวกึ่งกลางแนวตั้ง",
+    "alignRight": "จัดชิดขวา",
+    "alignTop": "จัดตำแหน่งด้านบน",
+    "alignBottom": "จัดตำแหน่งด้านล่าง",
+    "distribute": "แจกจ่าย",
+    "distributeHorizontal": "กระจายตามแนวนอน",
+    "distributeVertical": "กระจายในแนวตั้ง"
   },
   "digitalSignatureModal": {
     "certification": "รับรอง",
@@ -1079,7 +1120,8 @@
     "cropDimensions": "ขนาดครอบตัด",
     "dimensionInput": {
       "unitOfMeasurement": "หน่วย",
-      "autoTrim": "ที่ตั้งไว้ล่วงหน้า"
+      "autoTrim": "ที่ตั้งไว้ล่วงหน้า",
+      "autoTrimCustom": "กำหนดเอง"
     },
     "cropModal": {
       "applyTitle": "ใช้ครอบตัด?",
@@ -1106,10 +1148,11 @@
   },
   "redactionPanel": {
     "noMarkedRedactions": "เริ่มแก้ไขด้วยการทำเครื่องหมายข้อความ ภูมิภาค หน้า หรือทำการค้นหา",
-    "redactionSearchPlaceholder": "เพิ่มด้วยการค้นหาคำสำคัญหรือรูปแบบ",
+    "redactionSearchPlaceholder": "ตรวจทานด้วยแป้นพิมพ์หรือรูปแบบ",
     "redactionCounter": "ถูกทำเครื่องหมายสำหรับ Redaction",
     "clearMarked": "ชัดเจน",
     "redactAllMarked": "แก้ไขทั้งหมด",
+    "redactionItems": "รายการแก้ไข",
     "redactionItem": {
       "regionRedaction": "การแก้ไขภูมิภาค",
       "fullPageRedaction": "การแก้ไขแบบเต็มหน้า",
@@ -1126,7 +1169,7 @@
       "phoneNumbers": "หมายเลขโทรศัพท์",
       "images": "รูปภาพ",
       "emails": "อีเมล",
-      "pattern": "ลวดลาย",
+      "pattern": "รูปแบบ",
       "start": "เริ่มทำการค้นหาของคุณ"
     }
   },
@@ -1152,6 +1195,7 @@
     "createFolder": "สร้างโฟลเดอร์",
     "portfolioPanelTitle": "ไฟล์ PDF",
     "portfolioNewFolder": "แฟ้มใหม่",
+    "portfolioDocumentTitle": "ชื่อเอกสาร",
     "portfolioFolderPlaceholder": "ชื่อโฟลเดอร์",
     "portfolioFilePlaceholder": "ชื่อไฟล์",
     "folderNameAlreadyExists": "ชื่อโฟลเดอร์มีอยู่แล้ว",
@@ -1175,7 +1219,7 @@
     "rightAlign": "จัดชิดขวา",
     "justify": "ปรับ",
     "lineSpacing": "ระยะห่างระหว่างบรรทัดและย่อหน้า",
-    "bulletList": "รายการสัญลักษณ์แสดงหัวข้อย่อย",
+    "bulletList": "รายการแบบมีหัวข้อย่อย",
     "numberList": "รายการหมายเลข",
     "decreaseIndent": "ลดการเยื้อง",
     "increaseIndent": "เพิ่มการเยื้อง",
@@ -1189,10 +1233,41 @@
     "deleteRow": "ลบแถว",
     "deleteColumn": "ลบคอลัมน์",
     "deleteTable": "ลบตาราง",
-    "notSupportedOnMobile": "อุปกรณ์พกพาไม่รองรับการแก้ไข Office"
+    "deleted": "ลบแล้ว:",
+    "added": "เพิ่ม:",
+    "editing": "การแก้ไข",
+    "editingDescription": "แก้ไขเอกสาร",
+    "pageBreak": "ตัวแบ่งหน้า",
+    "reviewing": "กำลังทบทวน",
+    "reviewingDescription": "ให้คำแนะนำ",
+    "viewOnly": "สำหรับดูเท่านั้น",
+    "viewOnlyDescription": "ดูโดยไม่มีข้อเสนอแนะ",
+    "notSupportedOnMobile": "อุปกรณ์พกพาไม่รองรับการแก้ไข Office",
+    "previewAllChanges": "ดูตัวอย่างการเปลี่ยนแปลงทั้งหมด",
+    "accept": "ยอมรับ",
+    "reject": "ปฏิเสธ",
+    "pastingTitle": "ไม่สามารถวางได้",
+    "pastingMessage": "เบราว์เซอร์ของคุณไม่รองรับการวาง คุณสามารถใช้แป้นพิมพ์ลัดแทนได้",
+    "pastingWithoutFormatTitle": "ไม่สามารถวางโดยไม่มีการจัดรูปแบบได้",
+    "pastingWithoutFormatMessage": "เบราว์เซอร์ของคุณไม่รองรับการวางโดยไม่จัดรูปแบบ คุณสามารถใช้แป้นพิมพ์ลัดแทนได้",
+    "numberDropdown": {
+      "dropdownLabel": "การตั้งค่าหมายเลขไว้ล่วงหน้า"
+    },
+    "bulletDropdown": {
+      "dropdownLabel": "พรีเซ็ตกระสุน"
+    },
+    "fontSize": {
+      "dropdownLabel": "ขนาดตัวอักษร"
+    },
+    "fontStyles": {
+      "dropdownLabel": "รูปแบบตัวอักษร"
+    },
+    "fontFamily": {
+      "dropdownLabel": "ฟอนต์ตระกูล"
+    }
   },
   "insertPageModal": {
-    "title": "เพิ่มหน้าใหม่",
+    "title": "แทรกหน้าใหม่",
     "tabs": {
       "blank": "ว่างเปล่า",
       "upload": "ที่อัพโหลด"
@@ -1243,7 +1318,7 @@
     "save": "บันทึกเอกสาร",
     "comparePanel": {
       "Find": "ค้นหาในเอกสาร",
-      "changesList": "รายการเปลี่ยนแปลง",
+      "changesList": "เปลี่ยนรายการ",
       "change": "เปลี่ยน",
       "old": "เก่า",
       "new": "ใหม่",
@@ -1273,7 +1348,7 @@
     "watermark": "ลายน้ำ",
     "addWatermark": "ใส่ลายน้ำ",
     "save": "บันทึกไฟล์",
-    "pageError": "หน้าไม่ถูกต้อง ช่วงหน้าที่ถูกต้องอยู่ระหว่าง 1 -",
+    "pageError": "กรุณากรอกช่วงระหว่าง 1 - ",
     "fileNameCannotBeEmpty": "ชื่อไฟล์ต้องไม่ว่างเปล่า"
   },
   "filePicker": {
@@ -1297,7 +1372,7 @@
       "contentEdit": "แก้ไขเนื้อหา"
     },
     "addColorToCustom": "เพิ่มลงในสีที่กำหนดเอง",
-    "noToolSelected": "เลือกเครื่องมือเพื่อดูคุณสมบัติของเครื่องมือ",
+    "noToolSelected": "เอกสารนี้ไม่มีเลเยอร์ใดๆ",
     "noToolStyle": "เครื่องมือไม่มีคุณสมบัติการจัดรูปแบบใดๆ"
   },
   "signatureListPanel": {
@@ -1312,5 +1387,8 @@
   "rubberStampPanel": {
     "header": "แสตมป์",
     "standard": "แสตมป์มาตรฐาน"
+  },
+  "colorPickerModal": {
+    "modalTitle": "เครื่องมือเลือกสี"
   }
 }

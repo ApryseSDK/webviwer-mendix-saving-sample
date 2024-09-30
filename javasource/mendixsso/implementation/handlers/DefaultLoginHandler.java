@@ -19,10 +19,10 @@ import system.proxies.User;
 public class DefaultLoginHandler implements ILoginHandler {
 
     @Override
-    public void onCompleteLogin(IContext context, UserProfile userProfile, OIDCTokenResponse oidcTokenResponse, String continuation, IMxRuntimeRequest req, IMxRuntimeResponse resp) {
+    public void onCompleteLogin(IContext context, UserProfile userProfile, String userUUID, String emailAddress, OIDCTokenResponse oidcTokenResponse, String continuation, IMxRuntimeRequest req, IMxRuntimeResponse resp) {
         final User user;
         try {
-            user = UserManager.findOrCreateUser(userProfile);
+            user = UserManager.findOrCreateUser(userProfile, userUUID, emailAddress);
         } catch (UnauthorizedUserException e) {
             ErrorUtils.serveError(req, resp, ErrorUtils.ResponseType.UNAUTHORIZED, e.getUserFriendlyMessage(), e.getMessage(), true, null);
             return;
@@ -35,7 +35,7 @@ public class DefaultLoginHandler implements ILoginHandler {
         }
 
         try {
-            SessionManager.createSessionForUser(context, resp, req, user, oidcTokenResponse);
+            SessionManager.createSessionForUser(context, resp, user, oidcTokenResponse);
             OpenIDUtils.redirectToIndex(req, resp, continuation);
         } catch (ParseException e) {
             ErrorUtils.serveError(req, resp, ErrorUtils.ResponseType.INTERNAL_SERVER_ERROR, "Unexpected IdP server response: " + e.getMessage(), false, e);

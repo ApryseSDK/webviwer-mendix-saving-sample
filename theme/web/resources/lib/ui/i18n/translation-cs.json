@@ -123,13 +123,17 @@
     "showComparison": "Zobrazit srovnání",
     "back": "Zadní",
     "clearSignature": "Jasný podpis",
+    "clearInitial": "Jasná iniciála",
     "readOnlySignature": "Podpis pouze pro čtení nelze smazat",
     "newDocument": "Nový dokument",
     "sideBySideView": "Pohled vedle sebe",
     "pageNumberInput": "Zadání čísla stránky",
     "addNewColor": "Přidat novou barvu",
     "deleteColor": "Smazat vybranou barvu",
-    "copySelectedColor": "Kopírovat vybranou barvu"
+    "copySelectedColor": "Kopírovat vybranou barvu",
+    "showMoreColors": "Zobrazit více barev",
+    "showLessColors": "Zobrazit méně barev",
+    "fromCustomColorPicker": "z Custom Color Picker"
   },
   "annotation": {
     "areaMeasurement": "Plocha",
@@ -185,7 +189,8 @@
     "3D": "3D",
     "sound": "Zvuk",
     "changeView": "Změnit zobrazení",
-    "newImage": "Nový vzhled"
+    "newImage": "Nový vzhled",
+    "defaultCustomStampTitle": "Vlastní razítko"
   },
   "rubberStamp": {
     "Approved": "Schválený",
@@ -283,9 +288,11 @@
     "searching": "Hledání...",
     "searchCommentsPlaceholder": "Hledat komentáře",
     "searchDocumentPlaceholder": "Vyhledat dokument",
+    "searchSuggestionsPlaceholder": "Návrhy vyhledávání",
     "signHere": "Zde se podepište",
     "insertTextHere": "Zde vložte text",
     "imageSignatureAcceptedFileTypes": "Přijímány jsou pouze {{acceptedFileTypes}}",
+    "signatureRequired": "Pro pokračování je potřeba podpis a paraf",
     "enterMeasurement": "Zadejte měření mezi dvěma body",
     "errorEnterMeasurement": "Zadané číslo je neplatné, můžete zadat hodnoty jako 7,5 nebo 7 1/2",
     "linkURLorPage": "Adresa URL odkazu nebo stránka",
@@ -294,6 +301,7 @@
     "doNotShowAgain": "už mi to znovu neukazuj",
     "doNotAskAgain": "Neptej se znovu",
     "enterReplacementText": "Zadejte text, který chcete nahradit",
+    "sort": "Seřadit",
     "sortBy": "Seřadit",
     "emptyCustomStampInput": "Text razítka nemůže být prázdný",
     "unpostedComment": "Nezveřejněný komentář",
@@ -309,11 +317,13 @@
     "selectFile": "Zvolte soubor",
     "selectPageToReplace": "Vyberte stránky v dokumentu, kterými chcete nahradit.",
     "embeddedFiles": "Vložené soubory",
-    "pageNum": "Číslo stránky",
+    "pageNum": "Strana",
     "viewBookmark": "Zobrazit záložku na stránce",
     "error": "Chyba",
     "errorPageNumber": "Neplatné číslo stránky. Limit je",
-    "errorLoadingDocument": "Při čtení tohoto dokumentu došlo k problému a některé stránky se nemusí zobrazit. To znamená, že dokument může být poškozen. Celkový počet stránek je {{totalPageCount}} a počet zobrazených stránek je {{displayedPageCount}}."
+    "errorBlankPageNumber": "Zadejte prosím číslo stránky",
+    "errorLoadingDocument": "Při čtení tohoto dokumentu došlo k problému a některé stránky se nemusí zobrazit. To znamená, že dokument může být poškozen. Celkový počet stránek je {{totalPageCount}} a počet zobrazených stránek je {{displayedPageCount}}.",
+    "noRevisions": "Tento dokument nemá žádné revize."
   },
   "option": {
     "type": {
@@ -363,7 +373,10 @@
       "toolbarGroup-EditText": "Upravit text",
       "toolbarGroup-FillAndSign": "Vyplňte a podepište",
       "toolbarGroup-Forms": "formuláře",
-      "toolbarGroup-Redact": "Redigovat"
+      "toolbarGroup-Redact": "Redigovat",
+      "toolbarGroup-oe-Home": "Domov",
+      "toolbarGroup-oe-Insert": "Vložit",
+      "toolbarGroup-oe-Review": "Posouzení"
     },
     "annotationColor": {
       "StrokeColor": "Mrtvice",
@@ -405,7 +418,8 @@
       "noteContent": {
         "noName": "(beze jména)",
         "noDate": "(žádné rande)"
-      }
+      },
+      "toggleMultiSelect": "Přepněte vícenásobný výběr pro anotaci"
     },
     "pageTransition": {
       "continuous": "Souvislá stránka",
@@ -424,7 +438,8 @@
       "includeAnnotations": "Zahrnout anotace",
       "includeComments": "Zahrnout komentáře",
       "printSettings": "Nastavení tisku",
-      "printGrayscale": "Tisk ve stupních šedi"
+      "printGrayscale": "Tisk ve stupních šedi",
+      "printCurrentDisabled": "Aktuální zobrazení je dostupné pouze při prohlížení jedné stránky."
     },
     "printInfo": {
       "author": "Autor",
@@ -469,6 +484,8 @@
       "typeInitial": "Iniciály typu*",
       "drawSignature": "Nakreslit podpis*",
       "drawInitial": "Kreslit iniciály*",
+      "imageSignature": "Obrazový podpis",
+      "imageInitial": "Iniciály obrázku",
       "pickInitialsFile": "Vyberte Iniciály",
       "noSignatures": "Momentálně nejsou žádné uložené podpisy.",
       "fontStyle": "styl fontu"
@@ -518,7 +535,9 @@
       "countMeasurement": "Měření počtu",
       "radius": "Poloměr",
       "count": "Počet",
-      "length": "Délka"
+      "length": "Délka",
+      "xAxis": "Osa X",
+      "yAxis": "Osa Y"
     },
     "freeTextOption": {
       "autoSizeFont": "Dynamicky měnit velikost písma"
@@ -536,7 +555,8 @@
         "paperUnits": "Papírové jednotky",
         "displayUnits": "Zobrazovací jednotky",
         "fractionUnitsTooltip": "Jednotky zlomků platí pouze pro in a ft-in",
-        "incorrectSyntax": "Nesprávná syntaxe"
+        "incorrectSyntax": "Nesprávná syntaxe",
+        "units": "Jednotky"
       },
       "scaleOverlay": {
         "addNewScale": "Přidat nové měřítko",
@@ -555,6 +575,7 @@
         "irreversible": "nevratné",
         "willDeleteMeasurement": "a vymaže související měření.",
         "confirmDelete": "Opravdu chcete tuto stupnici smazat?",
+        "thisCantBeUndone": " Toto nelze vrátit zpět.",
         "ifChangeScale": "Pokud změníte měřítko pro vybrané měření nebo nástroj, upravte měřítko",
         "notUsedWillDelete": " již nebudou používány žádnými měřeními ani nástroji a budou smazány. Smazání je nevratné.",
         "ifToContinue": "Opravdu chcete pokračovat?"
@@ -620,7 +641,9 @@
       "rotatePageCounterClockwise": "Otočit stránku proti směru hodinových ručiček",
       "moreOptions": "Více možností",
       "moreOptionsMenu": "Nabídka možností více miniatur",
-      "enterPageNumbers": "Zadejte čísla stránek, které chcete vybrat"
+      "enterPageNumbers": "Zadejte čísla stránek, které chcete vybrat",
+      "multiSelectPages": "Stránky s vícenásobným výběrem",
+      "multiSelectPagesExample": "např. 1, 3, 5-10"
     },
     "thumbnailsControlOverlay": {
       "move": "Přesunout stránky"
@@ -662,8 +685,7 @@
       "current": "Aktuální stránka",
       "specify": "Zadejte stránky",
       "odd": "Pouze liché stránky",
-      "even": "Pouze liché stránky",
-      "header": "Označit úpravu stránek"
+      "even": "Pouze liché stránky"
     },
     "lineStyleOptions": {
       "title": "Styl"
@@ -715,6 +737,7 @@
       "redoChange": "Znovu proveďte změnu anotace",
       "openFile": "Otevřete nástroj pro výběr souboru",
       "openSearch": "Otevřete překryvnou vrstvu vyhledávání",
+      "zoomOptions": "Možnosti přiblížení",
       "zoomIn": "Přiblížit",
       "zoomOut": "Oddálit",
       "fitScreenWidth": "Přizpůsobte dokument šířce obrazovky na malé obrazovce (< 640 pixelů), jinak jej přizpůsobte původní velikosti",
@@ -746,13 +769,14 @@
       "editKeyboardShorcut": "Upravit klávesovou zkratku",
       "setShorcut": "Nastavte zástupce",
       "pressKeyToSet": "Stiskněte klávesu nebo pro nastavení nové zkratky.",
-      "shortcutAlreadyExists": "Výše uvedená klávesová zkratka již existuje."
+      "shortcutAlreadyExists": "Výše uvedená klávesová zkratka již existuje.",
+      "close": "Zavřít popisek"
     }
   },
   "warning": {
     "deletePage": {
       "deleteTitle": "Smazat stránku",
-      "deleteMessage": "Jste si jisti, že chcete smazat vybrané stránky? Toto nelze vrátit zpět",
+      "deleteMessage": "Jste si jisti, že chcete smazat vybrané stránky? Toto nelze vrátit zpět.",
       "deleteLastPageMessage": "Nemůžete odstranit všechny stránky v dokumentu."
     },
     "extractPage": {
@@ -837,6 +861,7 @@
   "tool": {
     "pan": "Pánev",
     "select": "Vybrat",
+    "selectAnOption": "Vyberte možnost",
     "Marquee": "Marquee Zoom",
     "Link": "Adresa URL odkazu nebo stránka",
     "Standard": "Standard",
@@ -846,7 +871,10 @@
     "url": "URL",
     "page": "Strana",
     "enterurl": "Zadejte adresu URL, na kterou chcete odkazovat",
-    "enterpage": "Vyberte číslo stránky, na kterou chcete odkazovat",
+    "enterUrlAlt": "Zadejte URL adresu",
+    "insertLink": "Vložit odkaz",
+    "insertLinkOrPage": "Vložit odkaz nebo stránku",
+    "enterpage": "Zadejte číslo stránky, na kterou chcete odkazovat",
     "urlLink": "URL odkaz"
   },
   "Model3D": {
@@ -858,9 +886,10 @@
   "OpenFile": {
     "enterUrlOrChooseFile": "Zadejte adresu URL nebo vyberte soubor, který se má načíst do WebViewer",
     "enterUrl": "Zadejte URL souboru",
-    "extension": "Přípona souboru",
+    "extension": "Přípona Souboru",
     "existingFile": "Soubor je již otevřen",
-    "addTab": "Přidat kartu"
+    "addTab": "Přidat kartu",
+    "newTab": "Nová karta"
   },
   "datePicker": {
     "previousMonth": "Předchozí měsíc",
@@ -959,6 +988,18 @@
       "listbox": "Seznam",
       "combobox": "Kombinovaný box"
     }
+  },
+  "alignmentPopup": {
+    "alignment": "Zarovnat",
+    "alignLeft": "Zarovnat doleva",
+    "alignHorizontalCenter": "Zarovnat vodorovně na střed",
+    "alignVerticalCenter": "Zarovnat svisle na střed",
+    "alignRight": "Zarovnat doprava",
+    "alignTop": "Zarovnat nahoru",
+    "alignBottom": "Zarovnat spodní",
+    "distribute": "Distribuovat",
+    "distributeHorizontal": "Rozmístit vodorovně",
+    "distributeVertical": "Distribuujte svisle"
   },
   "digitalSignatureModal": {
     "certification": "osvědčení",
@@ -1079,7 +1120,8 @@
     "cropDimensions": "Rozměry oříznutí",
     "dimensionInput": {
       "unitOfMeasurement": "Jednotka",
-      "autoTrim": "Předvolby"
+      "autoTrim": "Předvolby",
+      "autoTrimCustom": "Zvyk"
     },
     "cropModal": {
       "applyTitle": "Použít oříznutí?",
@@ -1106,10 +1148,11 @@
   },
   "redactionPanel": {
     "noMarkedRedactions": "Začněte redigovat označením textu, regionů, stránek nebo hledáním.",
-    "redactionSearchPlaceholder": "Přidejte podle vyhledávání klíčových slov nebo vzorů",
+    "redactionSearchPlaceholder": "Upravte pomocí klávesnice nebo vzorů",
     "redactionCounter": "Označeno k redigování",
     "clearMarked": "Průhledná",
     "redactAllMarked": "Upravit vše",
+    "redactionItems": "Položky redakce",
     "redactionItem": {
       "regionRedaction": "Krajská redakce",
       "fullPageRedaction": "Celostránková redakce",
@@ -1126,7 +1169,7 @@
       "phoneNumbers": "Telefonní čísla",
       "images": "snímky",
       "emails": "e-maily",
-      "pattern": "Vzor",
+      "pattern": "Vzory",
       "start": "Začněte hledat"
     }
   },
@@ -1152,6 +1195,7 @@
     "createFolder": "Vytvořit složku",
     "portfolioPanelTitle": "Portfolio PDF",
     "portfolioNewFolder": "Nová složka",
+    "portfolioDocumentTitle": "Název dokumentu",
     "portfolioFolderPlaceholder": "Název složky",
     "portfolioFilePlaceholder": "Název souboru",
     "folderNameAlreadyExists": "Název složky již existuje",
@@ -1189,10 +1233,41 @@
     "deleteRow": "Smazat řádek",
     "deleteColumn": "Smazat sloupec",
     "deleteTable": "Smazat tabulku",
-    "notSupportedOnMobile": "Úpravy Office nejsou podporovány na mobilních zařízeních."
+    "deleted": "Smazáno:",
+    "added": "Přidal:",
+    "editing": "Editace",
+    "editingDescription": "Upravit dokument",
+    "pageBreak": "Konec stránky",
+    "reviewing": "Recenze",
+    "reviewingDescription": "Dělat návrhy",
+    "viewOnly": "Pouze zobrazení",
+    "viewOnlyDescription": "Zobrazit bez návrhů",
+    "notSupportedOnMobile": "Úpravy Office nejsou podporovány na mobilních zařízeních.",
+    "previewAllChanges": "Náhled všech změn",
+    "accept": "Akceptovat",
+    "reject": "Odmítnout",
+    "pastingTitle": "Vkládání není k dispozici",
+    "pastingMessage": "Vkládání není ve vašem prohlížeči podporováno. Místo toho můžete použít klávesovou zkratku",
+    "pastingWithoutFormatTitle": "Vkládání bez formátování není k dispozici",
+    "pastingWithoutFormatMessage": "Vkládání bez formátování není ve vašem prohlížeči podporováno. Místo toho můžete použít klávesovou zkratku",
+    "numberDropdown": {
+      "dropdownLabel": "Předvolby číslování"
+    },
+    "bulletDropdown": {
+      "dropdownLabel": "Předvolby odrážky"
+    },
+    "fontSize": {
+      "dropdownLabel": "Velikost písma"
+    },
+    "fontStyles": {
+      "dropdownLabel": "Styly písma"
+    },
+    "fontFamily": {
+      "dropdownLabel": "Rodina písem"
+    }
   },
   "insertPageModal": {
-    "title": "Přidat novou stránku",
+    "title": "Vložit novou stránku",
     "tabs": {
       "blank": "Prázdný",
       "upload": "nahrát"
@@ -1273,7 +1348,7 @@
     "watermark": "Vodoznak",
     "addWatermark": "Přidat vodoznak",
     "save": "Uložení souboru",
-    "pageError": "Neplatná stránka. Platné rozsahy stránek jsou mezi 1 -",
+    "pageError": "Zadejte rozsah mezi 1 - ",
     "fileNameCannotBeEmpty": "Název souboru nesmí být prázdný"
   },
   "filePicker": {
@@ -1297,7 +1372,7 @@
       "contentEdit": "Úprava obsahu"
     },
     "addColorToCustom": "Přidat k vlastním barvám",
-    "noToolSelected": "Chcete-li zobrazit vlastnosti nástroje, vyberte nástroj",
+    "noToolSelected": "Tento dokument neobsahuje žádné vrstvy.",
     "noToolStyle": "Nástroj neobsahuje žádné stylingové vlastnosti."
   },
   "signatureListPanel": {
@@ -1312,5 +1387,8 @@
   "rubberStampPanel": {
     "header": "Známky",
     "standard": "Standardní razítka"
+  },
+  "colorPickerModal": {
+    "modalTitle": "Výběr barvy"
   }
 }

@@ -1,4 +1,4 @@
-import { createElement, useRef, useEffect, useState } from "react";
+import React, { createElement, useRef, useEffect, useState } from "react";
 import viewer, { WebViewerInstance } from "@pdftron/webviewer";
 import WebViewerModuleClient from "../clients/WebViewerModuleClient";
 
