@@ -59,6 +59,7 @@ export interface WebViewerPreviewProps {
     style: string;
     styleObject?: CSSProperties;
     readOnly: boolean;
+    renderMode?: "design" | "xray" | "structure";
     fileUrl: string;
     file: string;
     enableFilePicker: boolean;

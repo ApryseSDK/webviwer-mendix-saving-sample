@@ -52,6 +52,12 @@ public final class ConfigurationManager {
         );
     }
 
+    public String getOpenIDPrefix() {
+        return loadValueFromEnvOrDefault(
+                "MendixSSO_OpenIDPrefix",
+                "https://mxid2.mendixcloud.com/mxid2/");
+    }
+
     public String getIndexPage() {
 
         return OpenIDUtils.ensureStartsWithSlash(
@@ -83,7 +89,7 @@ public final class ConfigurationManager {
         );
     }
 
-    public String getSignupHint() {
+    public String getDefaultSignupHint() {
         return loadValueFromEnvOrDefault(
                 "MendixSSO_SignupHint",
                 Constants.getSignupHint()
@@ -103,6 +109,13 @@ public final class ConfigurationManager {
                 "MendixSSO_TokenValidatorMaxClockSkew",
                 Constants.getTokenValidatorMaxClockSkew(),
                 Long::parseLong
+        );
+    }
+
+    public String getAllowedContinuationURLs() {
+        return loadValueFromEnvOrDefault(
+                "MendixSSO_AllowedContinuationURLs",
+                ""
         );
     }
 }

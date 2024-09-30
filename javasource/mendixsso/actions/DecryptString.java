@@ -22,30 +22,39 @@ import java.util.Base64;
 
 public class DecryptString extends CustomJavaAction<java.lang.String>
 {
-	private java.lang.String value;
-	private java.lang.String key;
-	private java.lang.String prefix;
+	private final java.lang.String value;
+	private final java.lang.String key;
+	private final java.lang.String prefix;
 
-	public DecryptString(IContext context, java.lang.String value, java.lang.String key, java.lang.String prefix)
+	public DecryptString(
+		IContext context,
+		java.lang.String _value,
+		java.lang.String _key,
+		java.lang.String _prefix
+	)
 	{
 		super(context);
-		this.value = value;
-		this.key = key;
-		this.prefix = prefix;
+		this.value = _value;
+		this.key = _key;
+		this.prefix = _prefix;
 	}
 
 	@java.lang.Override
 	public java.lang.String executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-        if (this.value == null || !isStartsWithRightPrefix())
+        if (this.value == null || !isStartsWithRightPrefix()) {
             return null;
-        if (this.prefix == null || this.prefix.isEmpty())
+        }
+        if (this.prefix == null || this.prefix.isEmpty()) {
             throw new MendixRuntimeException("Prefix should not be empty");
-        if (this.key == null || this.key.isEmpty())
+        }
+        if (this.key == null || this.key.isEmpty()) {
             throw new MendixRuntimeException("Key should not be empty");
-        if (this.key.length() != 16)
+        }
+        if (this.key.length() != getKeyLength()) {
             throw new MendixRuntimeException("Key length should be 16");
+        }
 
         String decryptedText = null;
 
@@ -70,54 +79,69 @@ public class DecryptString extends CustomJavaAction<java.lang.String>
 	}
 
 	// BEGIN EXTRA CODE
-    private final int GCM_TAG_LENGTH = 16; // in bytes
-    private final String LEGACY_PREFIX = "{AES}";
-    private final String WRONG_KEY_ERROR_MESSAGE = "Cannot decrypt the text because it was either NOT encrypted with a key of length 16 or they key is different";
+    private static final int GCM_TAG_LENGTH = 16; // in bytes
+    private static final String LEGACY_PREFIX = "{AES}";
+    private static final String WRONG_KEY_ERROR_MESSAGE =
+            "Cannot decrypt the text because it was either NOT "
+                    + "encrypted with a key of length 16 or they key is different";
+
+    private static final int KEY_LENGTH = 16;
+    private static final int ENCRYPTED_STR_PART_NUMBER = 2;
 
     private String decryptUsingGcm() throws Exception {
         String[] s = this.value.substring(this.prefix.length()).split(";");
 
-        if (s.length < 2) //Not an encrypted string, just return the original value.
+        // Not an encrypted string, just return the original value.
+        if (s.length < ENCRYPTED_STR_PART_NUMBER) {
             return this.value;
+        }
 
-        Cipher c = Cipher.getInstance("AES/GCM/PKCS5PADDING");
+        Cipher c = Cipher.getInstance("AES/GCM/NoPadding");
         SecretKeySpec k = new SecretKeySpec(this.key.getBytes(), "AES");
 
         try {
-            GCMParameterSpec spec = new GCMParameterSpec(GCM_TAG_LENGTH * 8, Base64.getDecoder().decode(s[0]));
+            GCMParameterSpec spec =
+                    new GCMParameterSpec(GCM_TAG_LENGTH * 8, Base64.getDecoder().decode(s[0]));
             c.init(Cipher.DECRYPT_MODE, k, spec);
             byte[] encryptedData = Base64.getDecoder().decode(s[1]);
             return new String(c.doFinal(encryptedData));
         } catch (InvalidAlgorithmParameterException | BadPaddingException ex) {
-            if (isEncryptedWithWrongKey(ex.getMessage()))
+            if (isEncryptedWithWrongKey(ex.getMessage())) {
                 throw new MendixRuntimeException(WRONG_KEY_ERROR_MESSAGE);
-            else throw ex;
+            } else {
+                throw ex;
+            }
         }
     }
 
     private boolean isEncryptedWithWrongKey(String message) {
-        return
-                message.equals("Wrong IV length: must be 16 bytes long") ||
-                        message.equals("Given final block not properly padded");
+        return "Wrong IV length: must be 16 bytes long".equals(message)
+                || "Given final block not properly padded".equals(message);
     }
 
     private String decryptUsingLegacyAlgorithm() throws Exception {
         String[] s = this.value.substring(LEGACY_PREFIX.length()).split(";");
 
-        if (s.length < 2) //Not an encrypted string, just return the original value.
+        // Not an encrypted string, just return the original value.
+        if (s.length < ENCRYPTED_STR_PART_NUMBER) {
             return this.value;
+        }
 
         Cipher c = Cipher.getInstance("AES/CBC/PKCS5PADDING");
         SecretKeySpec k = new SecretKeySpec(this.key.getBytes(), "AES");
 
         try {
+            // Ignore SonarQube issue; false positive. Since we are decrypting, we cannot use
+            // dynamically generated random IV
             c.init(Cipher.DECRYPT_MODE, k, new IvParameterSpec(Base64.getDecoder().decode(s[0])));
             byte[] encryptedData = Base64.getDecoder().decode(s[1]);
             return new String(c.doFinal(encryptedData));
         } catch (InvalidAlgorithmParameterException | BadPaddingException ex) {
-            if (isEncryptedWithWrongKey(ex.getMessage()))
+            if (isEncryptedWithWrongKey(ex.getMessage())) {
                 throw new MendixRuntimeException(WRONG_KEY_ERROR_MESSAGE);
-            else throw ex;
+            } else {
+                throw ex;
+            }
         }
     }
 
@@ -128,5 +152,10 @@ public class DecryptString extends CustomJavaAction<java.lang.String>
     private boolean isStartsWithRightPrefix() {
         return this.value.startsWith(this.value) || isEncryptedWithLegacyAlgorithm(this.value);
     }
+
+    private static int getKeyLength() {
+        return KEY_LENGTH;
+    }
+
 	// END EXTRA CODE
 }

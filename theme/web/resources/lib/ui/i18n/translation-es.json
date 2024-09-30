@@ -123,13 +123,17 @@
     "showComparison": "Mostrar comparación",
     "back": "atrás",
     "clearSignature": "Firma clara",
+    "clearInitial": "Inicial clara",
     "readOnlySignature": "La firma de solo lectura no se puede eliminar",
     "newDocument": "Nuevo documento",
     "sideBySideView": "Vista de lado a lado",
     "pageNumberInput": "Entrada del número de página",
     "addNewColor": "Agregar nuevo color",
     "deleteColor": "Eliminar color seleccionado",
-    "copySelectedColor": "Copiar color seleccionado"
+    "copySelectedColor": "Copiar color seleccionado",
+    "showMoreColors": "Mostrar más colores",
+    "showLessColors": "Mostrar menos colores",
+    "fromCustomColorPicker": "del Selector de color personalizado"
   },
   "annotation": {
     "areaMeasurement": "Medición del área",
@@ -185,7 +189,8 @@
     "3D": "3D",
     "sound": "Sonar",
     "changeView": "Cambio Vista",
-    "newImage": "Nueva imagen"
+    "newImage": "Nueva imagen",
+    "defaultCustomStampTitle": "Sello personalizado"
   },
   "rubberStamp": {
     "Approved": "Aprobada",
@@ -222,7 +227,7 @@
     "notesPanel": "Notas",
     "outlinePanel": "Esquema",
     "outlinesPanel": "Esquemas",
-    "newOutlineTitle": "Título del nuevo esquema",
+    "newOutlineTitle": "Nuevo título de esquema",
     "outlineTitle": "Título del esquema",
     "destination": "Destino",
     "bookmarkPanel": "Marcador",
@@ -283,9 +288,11 @@
     "searching": "Buscando...",
     "searchCommentsPlaceholder": "Buscar comentarios",
     "searchDocumentPlaceholder": "Buscar documento",
+    "searchSuggestionsPlaceholder": "Sugerencias de búsqueda",
     "signHere": "Firma aquí",
     "insertTextHere": "Inserta el texto aquí",
     "imageSignatureAcceptedFileTypes": "Solo se aceptan {{acceptFileTypes}}",
+    "signatureRequired": "Se requiere una firma e inicial para continuar.",
     "enterMeasurement": "Ingrese la medición entre los dos puntos",
     "errorEnterMeasurement": "El número que ingresó no es válido, puede ingresar valores como 7.5 o 7 1/2",
     "linkURLorPage": "URL de enlace o una página",
@@ -294,6 +301,7 @@
     "doNotShowAgain": "no me muestres esto otra vez",
     "doNotAskAgain": "No preguntes de nuevo",
     "enterReplacementText": "Ingrese el texto que desea reemplazar",
+    "sort": "Clasificar",
     "sortBy": "Ordenar por",
     "emptyCustomStampInput": "El texto del sello no puede estar vacío",
     "unpostedComment": "Comentario no publicado",
@@ -309,11 +317,13 @@
     "selectFile": "Seleccione Archivo",
     "selectPageToReplace": "Seleccione las páginas del documento por las que le gustaría reemplazar.",
     "embeddedFiles": "Archivos incrustados",
-    "pageNum": "Número de página",
+    "pageNum": "Página",
     "viewBookmark": "Ver marcador en la página",
     "error": "Error",
     "errorPageNumber": "Número de página no válido. El límite es",
-    "errorLoadingDocument": "Hubo un problema al leer este documento y es posible que no se muestren algunas páginas. Esto indica que el documento puede estar dañado. El recuento total de páginas es {{totalPageCount}} y el número de páginas que se muestran es {{displayedPageCount}}."
+    "errorBlankPageNumber": "Por favor especifique un número de página",
+    "errorLoadingDocument": "Hubo un problema al leer este documento y es posible que no se muestren algunas páginas. Esto indica que el documento puede estar dañado. El recuento total de páginas es {{totalPageCount}} y el número de páginas que se muestran es {{displayedPageCount}}.",
+    "noRevisions": "Este documento no tiene revisiones."
   },
   "option": {
     "type": {
@@ -363,7 +373,10 @@
       "toolbarGroup-EditText": "Editar texto",
       "toolbarGroup-FillAndSign": "Llenar y firmar",
       "toolbarGroup-Forms": "Formularios",
-      "toolbarGroup-Redact": "Redactar"
+      "toolbarGroup-Redact": "Redactar",
+      "toolbarGroup-oe-Home": "Hogar",
+      "toolbarGroup-oe-Insert": "Insertar",
+      "toolbarGroup-oe-Review": "Revisar"
     },
     "annotationColor": {
       "StrokeColor": "Color del borde",
@@ -405,7 +418,8 @@
       "noteContent": {
         "noName": "(sin nombre)",
         "noDate": "(sin cita)"
-      }
+      },
+      "toggleMultiSelect": "Alternar selección múltiple para anotación"
     },
     "pageTransition": {
       "continuous": "Continua",
@@ -424,7 +438,8 @@
       "includeAnnotations": "Incluir anotaciones",
       "includeComments": "Incluir comentarios",
       "printSettings": "Configuración de impresión",
-      "printGrayscale": "Imprimir en escala de grises"
+      "printGrayscale": "Imprimir en escala de grises",
+      "printCurrentDisabled": "La vista actual solo está disponible cuando se visualiza una sola página."
     },
     "printInfo": {
       "author": "Autor",
@@ -469,6 +484,8 @@
       "typeInitial": "Tipo Iniciales*",
       "drawSignature": "Dibujar Firma*",
       "drawInitial": "Dibujar iniciales*",
+      "imageSignature": "Firma de imagen",
+      "imageInitial": "Iniciales de imagen",
       "pickInitialsFile": "Elija Iniciales",
       "noSignatures": "Actualmente no hay firmas guardadas.",
       "fontStyle": "Estilo de fuente"
@@ -518,7 +535,9 @@
       "countMeasurement": "Medida de conteo",
       "radius": "Radio",
       "count": "Contar",
-      "length": "Longitud"
+      "length": "Longitud",
+      "xAxis": "Eje X",
+      "yAxis": "Y-Axis"
     },
     "freeTextOption": {
       "autoSizeFont": "Escalar el tamaño de fuente dinámicamente"
@@ -536,7 +555,8 @@
         "paperUnits": "Unidades de papel",
         "displayUnits": "Unidades de visualización",
         "fractionUnitsTooltip": "Las unidades de fracción solo se aplican a pulgadas y pies-pulgadas.",
-        "incorrectSyntax": "Sintaxis incorrecta"
+        "incorrectSyntax": "Sintaxis incorrecta",
+        "units": "Unidades"
       },
       "scaleOverlay": {
         "addNewScale": "Agregar nueva escala",
@@ -555,6 +575,7 @@
         "irreversible": "irreversible",
         "willDeleteMeasurement": "y eliminará las medidas asociadas.",
         "confirmDelete": "¿Está seguro de que desea eliminar esta escala?",
+        "thisCantBeUndone": " Esto no se puede deshacer.",
         "ifChangeScale": "Si cambia la escala para la medida o herramienta seleccionada, la escala",
         "notUsedWillDelete": " ya no será utilizado por ninguna medida o herramienta y será eliminado. La eliminación es irreversible.",
         "ifToContinue": "¿Está seguro de que desea continuar?"
@@ -620,7 +641,9 @@
       "rotatePageCounterClockwise": "Girar página en sentido antihorario",
       "moreOptions": "Mas opciones",
       "moreOptionsMenu": "Menú de opciones de más miniaturas",
-      "enterPageNumbers": "Ingrese los números de página para seleccionar"
+      "enterPageNumbers": "Ingrese los números de página para seleccionar",
+      "multiSelectPages": "Páginas de selección múltiple",
+      "multiSelectPagesExample": "p.ej. 1, 3, 5-10"
     },
     "thumbnailsControlOverlay": {
       "move": "Mover páginas"
@@ -662,8 +685,7 @@
       "current": "Página actual",
       "specify": "Especificar páginas",
       "odd": "Solo páginas impares",
-      "even": "Sólo las páginas pares",
-      "header": "Marcar la redacción de páginas"
+      "even": "Sólo las páginas pares"
     },
     "lineStyleOptions": {
       "title": "Estilo"
@@ -715,6 +737,7 @@
       "redoChange": "Rehacer un cambio de anotación",
       "openFile": "Abre el selector de archivos",
       "openSearch": "Abre la superposición de búsqueda",
+      "zoomOptions": "Opciones de zoom",
       "zoomIn": "Acercarse",
       "zoomOut": "Disminuir el zoom",
       "fitScreenWidth": "Ajuste el documento al ancho de la pantalla en una pantalla pequeña (< 640 px), de lo contrario, ajústelo a su tamaño original",
@@ -746,13 +769,14 @@
       "editKeyboardShorcut": "Editar atajo de teclado",
       "setShorcut": "Establecer acceso directo",
       "pressKeyToSet": "Pulse la tecla o las teclas para establecer un nuevo acceso directo.",
-      "shortcutAlreadyExists": "El método abreviado de teclado anterior ya existe."
+      "shortcutAlreadyExists": "El método abreviado de teclado anterior ya existe.",
+      "close": "Cerrar información sobre herramientas"
     }
   },
   "warning": {
     "deletePage": {
       "deleteTitle": "Eliminar página",
-      "deleteMessage": "¿Está seguro de que desea eliminar las páginas seleccionadas? Esto no se puede deshacer",
+      "deleteMessage": "¿Está seguro de que desea eliminar las páginas seleccionadas? Esto no se puede deshacer.",
       "deleteLastPageMessage": "No puede eliminar todas las páginas del documento."
     },
     "extractPage": {
@@ -837,6 +861,7 @@
   "tool": {
     "pan": "Panorámica",
     "select": "Seleccionar",
+    "selectAnOption": "Seleccione una opción",
     "Marquee": "Zoom de selección",
     "Link": "URL de enlace o página",
     "Standard": "Estándar",
@@ -846,7 +871,10 @@
     "url": "URL",
     "page": "Página",
     "enterurl": "Ingrese la URL a la que desea vincular",
-    "enterpage": "Seleccione el número de página que desea vincular",
+    "enterUrlAlt": "Introducir URL",
+    "insertLink": "Insertar el link",
+    "insertLinkOrPage": "Insertar enlace o página",
+    "enterpage": "Ingrese el número de página al que desea vincular",
     "urlLink": "enlace URL"
   },
   "Model3D": {
@@ -857,10 +885,11 @@
   },
   "OpenFile": {
     "enterUrlOrChooseFile": "Ingrese una URL o elija un archivo para cargar en WebViewer",
-    "enterUrl": "Introduzca la URL del archivo",
+    "enterUrl": "Ingrese la URL del archivo",
     "extension": "Extensión de archivo",
     "existingFile": "El archivo ya está abierto",
-    "addTab": "Añadir pestaña"
+    "addTab": "Agregar pestaña",
+    "newTab": "Nueva pestaña"
   },
   "datePicker": {
     "previousMonth": "Mes anterior",
@@ -959,6 +988,18 @@
       "listbox": "Cuadro de lista",
       "combobox": "Caja combo"
     }
+  },
+  "alignmentPopup": {
+    "alignment": "Alinear",
+    "alignLeft": "Alinear a la izquierda",
+    "alignHorizontalCenter": "Alinear el centro horizontal",
+    "alignVerticalCenter": "Alinear centro vertical",
+    "alignRight": "Alinear a la derecha",
+    "alignTop": "Alinear arriba",
+    "alignBottom": "Alinear abajo",
+    "distribute": "Distribuir",
+    "distributeHorizontal": "Distribuir horizontalmente",
+    "distributeVertical": "Distribuir verticalmente"
   },
   "digitalSignatureModal": {
     "certification": "Certificación",
@@ -1079,7 +1120,8 @@
     "cropDimensions": "Dimensiones de cultivo",
     "dimensionInput": {
       "unitOfMeasurement": "Unidad",
-      "autoTrim": "Recorte automático"
+      "autoTrim": "Recorte automático",
+      "autoTrimCustom": "Costumbre"
     },
     "cropModal": {
       "applyTitle": "¿Aplicar cultivo?",
@@ -1106,10 +1148,11 @@
   },
   "redactionPanel": {
     "noMarkedRedactions": "Comience a redactar marcando texto, regiones, páginas o realizando una búsqueda.",
-    "redactionSearchPlaceholder": "Agregar por búsqueda de palabra clave o patrones",
+    "redactionSearchPlaceholder": "Redactar por teclado o patrones",
     "redactionCounter": "Marcado para Redacción",
     "clearMarked": "Claro",
     "redactAllMarked": "Redactar todo",
+    "redactionItems": "Elementos de redacción",
     "redactionItem": {
       "regionRedaction": "Redacción de la región",
       "fullPageRedaction": "Redacción de página completa",
@@ -1126,7 +1169,7 @@
       "phoneNumbers": "Números de teléfono",
       "images": "Imágenes",
       "emails": "Correos electrónicos",
-      "pattern": "Patrón",
+      "pattern": "Patrones",
       "start": "Empieza a hacer tu búsqueda"
     }
   },
@@ -1152,6 +1195,7 @@
     "createFolder": "Crear carpeta",
     "portfolioPanelTitle": "Portafolio PDF",
     "portfolioNewFolder": "Nueva carpeta",
+    "portfolioDocumentTitle": "Titulo del documento",
     "portfolioFolderPlaceholder": "Nombre de la carpeta",
     "portfolioFilePlaceholder": "Nombre del archivo",
     "folderNameAlreadyExists": "El nombre de la carpeta ya existe",
@@ -1176,7 +1220,7 @@
     "justify": "Justificar",
     "lineSpacing": "Espaciado de líneas y párrafos",
     "bulletList": "Lista con viñetas",
-    "numberList": "lista numerada",
+    "numberList": "Lista numerada",
     "decreaseIndent": "Disminuir sangría",
     "increaseIndent": "Aumentar sangría",
     "insertLink": "Insertar el link",
@@ -1189,10 +1233,41 @@
     "deleteRow": "Borrar fila",
     "deleteColumn": "Eliminar columna",
     "deleteTable": "Eliminar tabla",
-    "notSupportedOnMobile": "La edición de Office no es compatible con dispositivos móviles."
+    "deleted": "Eliminado:",
+    "added": "Agregado:",
+    "editing": "Edición",
+    "editingDescription": "Editar documento",
+    "pageBreak": "Salto de página",
+    "reviewing": "Revisando",
+    "reviewingDescription": "Hacer sugerencias",
+    "viewOnly": "Sólo vista",
+    "viewOnlyDescription": "Ver sin sugerencias",
+    "notSupportedOnMobile": "La edición de Office no es compatible con dispositivos móviles.",
+    "previewAllChanges": "Vista previa de todos los cambios",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "pastingTitle": "Pegar no disponible",
+    "pastingMessage": "Su navegador no admite pegar. En su lugar, puedes usar un atajo de teclado.",
+    "pastingWithoutFormatTitle": "Pegar sin formatear no está disponible",
+    "pastingWithoutFormatMessage": "Su navegador no admite pegar sin formatear. En su lugar, puedes usar un atajo de teclado.",
+    "numberDropdown": {
+      "dropdownLabel": "Preajustes de numeración"
+    },
+    "bulletDropdown": {
+      "dropdownLabel": "Preajustes de viñetas"
+    },
+    "fontSize": {
+      "dropdownLabel": "Tamaño de fuente"
+    },
+    "fontStyles": {
+      "dropdownLabel": "Estilos de fuente"
+    },
+    "fontFamily": {
+      "dropdownLabel": "Familia de fuentes"
+    }
   },
   "insertPageModal": {
-    "title": "Agregar nueva página",
+    "title": "Insertar nueva página",
     "tabs": {
       "blank": "Vacío",
       "upload": "Subir"
@@ -1273,7 +1348,7 @@
     "watermark": "Filigrana",
     "addWatermark": "Agregar marca de agua",
     "save": "Guardar el archivo",
-    "pageError": "Página no válida. Los intervalos de páginas válidos están entre 1 y",
+    "pageError": "Por favor ingrese un rango entre 1 - ",
     "fileNameCannotBeEmpty": "El nombre del archivo no puede estar vacío"
   },
   "filePicker": {
@@ -1297,7 +1372,7 @@
       "contentEdit": "Editar contenido"
     },
     "addColorToCustom": "Agregar a colores personalizados",
-    "noToolSelected": "Seleccione una herramienta para ver los estilos de la herramienta",
+    "noToolSelected": "Este documento no contiene ninguna capa.",
     "noToolStyle": "La herramienta no contiene ninguna propiedad de estilo."
   },
   "signatureListPanel": {
@@ -1312,5 +1387,8 @@
   "rubberStampPanel": {
     "header": "Sellos",
     "standard": "Sellos estándar"
+  },
+  "colorPickerModal": {
+    "modalTitle": "Selector de color"
   }
 }

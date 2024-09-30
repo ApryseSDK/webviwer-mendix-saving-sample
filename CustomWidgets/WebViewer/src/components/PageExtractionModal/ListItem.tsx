@@ -1,4 +1,4 @@
-import React, { createElement } from "react";
+import React, { createElement, Fragment } from "react";
 
 interface ListItemInputProps {
     item: any;
@@ -94,7 +94,7 @@ class ListItem extends React.Component<ListItemInputProps, ListItemState> {
     // eslint-disable-next-line no-undef
     render(): JSX.Element {
         if (!this.state.shouldRenderItem) {
-            return <></>;
+            return <Fragment></Fragment>;
         }
         return (
             <div
